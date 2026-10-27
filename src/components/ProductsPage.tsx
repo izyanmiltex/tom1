@@ -75,7 +75,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
   const catalogItems: CatalogProductDetail[] = [
     {
       id: 'sh-saddle-01',
-      name: 'Master French Calfskin Dressage Saddle',
+      name: 'Synthetic Race Exercise Saddle',
       category: 'saddle',
       categoryLabel: 'Saddles',
       image: 'https://aryezmiltex.com/saddle1',
@@ -84,7 +84,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-saddle-02',
-      name: 'Close-Contact Hunter & Jumper Saddle',
+      name: 'Leather Race Exercise Saddle',
       category: 'saddle',
       categoryLabel: 'Saddles',
       image: 'https://aryezmiltex.com/saddle2',
@@ -93,7 +93,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-saddle-03',
-      name: 'Grand Prix Monoflap Eventing Saddle',
+      name: 'Synthetic Exercise Saddle',
       category: 'saddle',
       categoryLabel: 'Saddles',
       image: 'https://aryezmiltex.com/saddle3',
@@ -102,7 +102,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-saddle-04',
-      name: 'Anatomical All-Purpose Performance Saddle',
+      name: 'English Leather Jumping Saddle',
       category: 'saddle',
       categoryLabel: 'Saddles',
       image: 'https://aryezmiltex.com/saddle4',
@@ -111,7 +111,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-saddle-05',
-      name: 'Signature Competition Jumping Saddle',
+      name: 'Kids Pony Pad Pack Set Synthetic',
       category: 'saddle',
       categoryLabel: 'Saddles',
       image: 'https://aryezmiltex.com/saddle5',
@@ -120,7 +120,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-saddle-06',
-      name: 'Classic English Endurance & Trail Saddle',
+      name: 'English Leather Tomboy Jumping Saddle',
       category: 'saddle',
       categoryLabel: 'Saddles',
       image: 'https://aryezmiltex.com/saddle6',
@@ -129,7 +129,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-saddle-07',
-      name: 'Custom Atelier Monoflap Dressage Saddle',
+      name: 'Suede Polo Saddle',
       category: 'saddle',
       categoryLabel: 'Saddles',
       image: 'https://aryezmiltex.com/saddle7',
@@ -138,7 +138,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-saddle-08',
-      name: 'Elite Show Jumping Pro Saddle',
+      name: 'English Leather Dressage Saddle',
       category: 'saddle',
       categoryLabel: 'Saddles',
       image: 'https://aryezmiltex.com/saddle8',
@@ -147,7 +147,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-saddle-09',
-      name: 'Heritage Full-Grain Hunter Derby Saddle',
+      name: 'Status Saddle',
       category: 'saddle',
       categoryLabel: 'Saddles',
       image: 'https://aryezmiltex.com/saddle9',
@@ -156,7 +156,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-halter-01',
-      name: 'Siena Braided Halter & Lead Set in Terracotta',
+      name: 'PP Halter Suede Padding With Rope',
       category: 'halters',
       categoryLabel: 'Halters',
       image: 'http://aryezmiltex.com/halter1',
@@ -166,7 +166,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-halter-02',
-      name: 'The Grand Prix Fleece-Lined Shipping Halter in Noir',
+      name: 'PP Halter Mink Padding',
       category: 'halters',
       categoryLabel: 'Halters',
       image: 'http://aryezmiltex.com/halter2',
@@ -176,7 +176,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-halter-03',
-      name: 'Anatomic Ergonomic Padded Leather Halter in Havana Brown',
+      name: 'PVC/Biothane Halter With Padding',
       category: 'halters',
       categoryLabel: 'Halters',
       image: 'http://aryezmiltex.com/halter3',
@@ -186,7 +186,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-halter-04',
-      name: 'Monogrammed French Calfskin Show Halter with Brass Plate',
+      name: 'PP Halter Mink Padding',
       category: 'halters',
       categoryLabel: 'Halters',
       image: 'http://aryezmiltex.com/halter4',
@@ -196,7 +196,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-halter-05',
-      name: 'Artisanal Two-Tone Hand-Tooled Floral Leather Halter',
+      name: 'Rope Halter',
       category: 'halters',
       categoryLabel: 'Halters',
       image: 'http://aryezmiltex.com/halter5',
@@ -206,7 +206,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-halter-06',
-      name: 'Classic Triple-Stitched English Bridle Leather Stable Halter',
+      name: 'Rope Halter',
       category: 'halters',
       categoryLabel: 'Halters',
       image: 'http://aryezmiltex.com/halter6',
@@ -216,7 +216,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-halter-07',
-      name: 'Silver Filigree Championship Presentation Leather Halter',
+      name: 'PP Halter Mink Padding',
       category: 'halters',
       categoryLabel: 'Halters',
       image: 'http://aryezmiltex.com/halter7',
@@ -226,7 +226,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-halter-08',
-      name: 'Anatomic Rolled Leather Grooming & Training Halter',
+      name: 'Leather Halter With Padding',
       category: 'halters',
       categoryLabel: 'Halters',
       image: 'http://aryezmiltex.com/halter8',
@@ -236,7 +236,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-halter-09',
-      name: 'Royal Navy & Havana Padded Ergonomic Halter Set',
+      name: 'Leather Nylon Halter',
       category: 'halters',
       categoryLabel: 'Halters',
       image: 'http://aryezmiltex.com/halter9',
@@ -246,7 +246,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-halter-10',
-      name: 'Reinforced Heavy Harness Leather Draft & Warmblood Halter',
+      name: 'PP Halter Fleece Padding',
       category: 'halters',
       categoryLabel: 'Halters',
       image: 'http://aryezmiltex.com/halter10',
@@ -256,7 +256,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-halter-11',
-      name: 'Artisan Rawhide-Braided Floral Tooled Show Halter',
+      name: 'Leather Polo Halter',
       category: 'halters',
       categoryLabel: 'Halters',
       image: 'http://aryezmiltex.com/halter11',
@@ -266,7 +266,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-halter-12',
-      name: 'Soft Lambswool Padded Travel & Trailering Halter',
+      name: 'Leather Halter',
       category: 'halters',
       categoryLabel: 'Halters',
       image: 'http://aryezmiltex.com/halter12',
@@ -276,7 +276,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-halter-13',
-      name: 'Midnight Noir Ergonomic Halter with Rose Gold Hardware',
+      name: 'PVC/Biothane Halter With Padding',
       category: 'halters',
       categoryLabel: 'Halters',
       image: 'http://aryezmiltex.com/halter13',
@@ -286,7 +286,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-halter-14',
-      name: 'Vintage Distressed Leather Field Halter with Solid Brass Rings',
+      name: 'Rope Halter',
       category: 'halters',
       categoryLabel: 'Halters',
       image: 'http://aryezmiltex.com/halter14',
@@ -296,7 +296,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-pad-01',
-      name: 'Luxury Quilted Anatomic Dressage Saddle Pad',
+      name: 'Dressage Saddle Pad',
       category: 'saddle-pads',
       categoryLabel: 'Saddle Pads',
       image: 'https://aryezmiltex.com/saddlepad1',
@@ -305,7 +305,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-pad-02',
-      name: 'Shock-Absorbing Memory Foam Close-Contact Pad',
+      name: 'Close-Contact Saddle Pad',
       category: 'saddle-pads',
       categoryLabel: 'Saddle Pads',
       image: 'https://aryezmiltex.com/saddlepad2',
@@ -314,7 +314,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-pad-03',
-      name: 'Grand Prix Velvet Jumping Saddle Pad',
+      name: 'Jumping Saddle Pad',
       category: 'saddle-pads',
       categoryLabel: 'Saddle Pads',
       image: 'https://aryezmiltex.com/saddlepad3',
@@ -323,7 +323,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-pad-04',
-      name: 'Anatomic Merino Wool Lined Half Pad',
+      name: 'Half Pad',
       category: 'saddle-pads',
       categoryLabel: 'Saddle Pads',
       image: 'https://aryezmiltex.com/saddlepad4',
@@ -332,7 +332,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-pad-05',
-      name: 'Technical 3D Air-Mesh High-Wither Saddle Pad',
+      name: 'High-Wither Saddle Pad',
       category: 'saddle-pads',
       categoryLabel: 'Saddle Pads',
       image: 'https://aryezmiltex.com/saddlepad5',
@@ -341,7 +341,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-pad-06',
-      name: 'Classic Heritage Cotton Twill Saddle Pad',
+      name: 'Schooling Saddle Pad',
       category: 'saddle-pads',
       categoryLabel: 'Saddle Pads',
       image: 'https://aryezmiltex.com/saddlepad6',
@@ -350,7 +350,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-pad-07',
-      name: 'Performance Anti-Slip Hexagonal Grip Saddle Pad',
+      name: 'Grip Saddle Pad',
       category: 'saddle-pads',
       categoryLabel: 'Saddle Pads',
       image: 'https://aryezmiltex.com/saddlepad7',
@@ -359,7 +359,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-rope-01',
-      name: 'Master Braided Cotton Lead Rope with Brass Bull Snap',
+      name: 'Cotton Lead Rope',
       category: 'reins-lead-rope',
       categoryLabel: 'Reins / Lead Rope',
       image: 'https://aryezmiltex.com/rope1',
@@ -368,7 +368,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-rope-02',
-      name: 'Premium Polypropylene Training Lead Rope',
+      name: 'Training Lead Rope',
       category: 'reins-lead-rope',
       categoryLabel: 'Reins / Lead Rope',
       image: 'https://aryezmiltex.com/rope2',
@@ -377,7 +377,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-rope-03',
-      name: 'Handcrafted English Leather Laced Reins',
+      name: 'Laced Reins',
       category: 'reins-lead-rope',
       categoryLabel: 'Reins / Lead Rope',
       image: 'https://aryezmiltex.com/rope3',
@@ -386,7 +386,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-rope-04',
-      name: 'Continental Web Reins with Leather Stops',
+      name: 'Web Reins',
       category: 'reins-lead-rope',
       categoryLabel: 'Reins / Lead Rope',
       image: 'https://aryezmiltex.com/rope4',
@@ -395,7 +395,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-jacket-01',
-      name: 'Equestrian Tailored Competition Show Jacket',
+      name: 'Competition Show Jacket',
       category: 'show-jackets',
       categoryLabel: 'Show Jackets',
       image: 'https://aryezmiltex.com/show%20acket%201',
@@ -405,7 +405,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-jacket-02',
-      name: 'Grand Prix Technical Velvet Show Jacket',
+      name: 'Tailored Show Jacket',
       category: 'show-jackets',
       categoryLabel: 'Show Jackets',
       image: 'https://aryezmiltex.com/show%20acket%202',
@@ -415,7 +415,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-whip-01',
-      name: 'Hand-Braided Leather Dressage Whip',
+      name: 'Dressage Whip',
       category: 'whips',
       categoryLabel: 'Whips',
       image: 'https://aryezmiltex.com/whip%202',
@@ -425,7 +425,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-whip-02',
-      name: 'Precision Jumping Bat & Crop',
+      name: 'Jumping Crop',
       category: 'whips',
       categoryLabel: 'Whips',
       image: 'https://aryezmiltex.com/whip%201.png',
@@ -435,7 +435,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-leg-01',
-      name: 'Anatomical Carbon-Shield Tendon Boots',
+      name: 'Front Tendon Boots',
       category: 'leg-protectors',
       categoryLabel: 'Leg Protectors',
       image: 'https://aryezmiltex.com/legprotector1',
@@ -445,7 +445,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-leg-02',
-      name: 'Pro-Jump Ergonomic Fetlock Hind Boots',
+      name: 'Fetlock Hind Boots',
       category: 'leg-protectors',
       categoryLabel: 'Leg Protectors',
       image: 'https://aryezmiltex.com/legprotector2',
@@ -455,7 +455,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-leg-03',
-      name: 'Luxury Faux-Shearling Lined Open-Front Tendon Boots',
+      name: 'Open-Front Tendon Boots',
       category: 'leg-protectors',
       categoryLabel: 'Leg Protectors',
       image: 'https://aryezmiltex.com/legprotector3',
@@ -465,7 +465,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-leg-04',
-      name: 'Grand Prix Matching Shearling Fetlock Boots',
+      name: 'Contoured Fetlock Boots',
       category: 'leg-protectors',
       categoryLabel: 'Leg Protectors',
       image: 'https://aryezmiltex.com/legprotector4',
@@ -475,7 +475,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-leg-05',
-      name: 'Elite Performance All-Around Brushing & Splint Boots',
+      name: 'All-Around Splint Boots',
       category: 'leg-protectors',
       categoryLabel: 'Leg Protectors',
       image: 'https://aryezmiltex.com/legprotector5',
@@ -485,7 +485,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-bag-01',
-      name: 'Sonora Artisan Hand-Tooled Leather & Cowhide Saddle Bag',
+      name: 'Saddle Bag',
       category: 'leather-bags',
       categoryLabel: 'Leather Bags',
       image: 'https://aryezmiltex.com/bag1',
@@ -495,7 +495,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-bag-02',
-      name: 'Sedona Sunflower Tooled Leather Crossbody Bag',
+      name: 'Crossbody Bag',
       category: 'leather-bags',
       categoryLabel: 'Leather Bags',
       image: 'https://aryezmiltex.com/bag2',
@@ -505,7 +505,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-bag-03',
-      name: 'Turquoise Feather Tooled Cowhide Artisan Tote',
+      name: 'Tote Bag',
       category: 'leather-bags',
       categoryLabel: 'Leather Bags',
       image: 'https://aryezmiltex.com/bag3',
@@ -515,7 +515,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-bag-04',
-      name: 'Frontier Bloom Tooled Fringe Leather Messenger',
+      name: 'Messenger Bag',
       category: 'leather-bags',
       categoryLabel: 'Leather Bags',
       image: 'https://aryezmiltex.com/bag4',
@@ -525,7 +525,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-bag-05',
-      name: 'Siena Artisan Two-Tone Hand-Tooled Leather Tote',
+      name: 'Shoulder Tote Bag',
       category: 'leather-bags',
       categoryLabel: 'Leather Bags',
       image: 'https://aryezmiltex.com/bag5',
@@ -535,7 +535,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-bag-06',
-      name: 'Bravado Rider Bucking Horse Crossbody Bag',
+      name: 'Bucking Horse Crossbody Bag',
       category: 'leather-bags',
       categoryLabel: 'Leather Bags',
       image: 'https://aryezmiltex.com/bag6',
@@ -545,7 +545,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-bag-07',
-      name: 'Western Tooled Leather & Hair-on Cowhide Clutch Wallet',
+      name: 'Clutch Wallet',
       category: 'leather-bags',
       categoryLabel: 'Leather Bags',
       image: 'https://aryezmiltex.com/bag7',
@@ -555,7 +555,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-bag-08',
-      name: 'Vaquero Tooled Turquoise Crossbody with Side Fringe',
+      name: 'Fringe Crossbody Bag',
       category: 'leather-bags',
       categoryLabel: 'Leather Bags',
       image: 'https://aryezmiltex.com/bag8',
@@ -565,7 +565,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-bag-09',
-      name: 'Prairie Sunflower Fringe Cowhide Hobo Shoulder Bag',
+      name: 'Hobo Bag',
       category: 'leather-bags',
       categoryLabel: 'Leather Bags',
       image: 'https://aryezmiltex.com/bag9',
@@ -575,7 +575,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
     },
     {
       id: 'sh-bag-10',
-      name: 'The Dakota Hand-Tooled Leather & Cowhide Shoulder Tote',
+      name: 'Shoulder Tote',
       category: 'leather-bags',
       categoryLabel: 'Leather Bags',
       image: 'http://aryezmiltex.com/bag10',

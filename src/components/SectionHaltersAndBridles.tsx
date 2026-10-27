@@ -20,7 +20,7 @@ export const SectionHaltersAndBridles: React.FC<SectionHaltersAndBridlesProps> =
     {
       id: 'sh-bridle-03',
       image: 'https://aryezmiltex.com/birdle1',
-      title: 'Monoflap Dressage Bridle',
+      title: 'English Sanffle Birdle Polo Saddle',
       category: 'bridles',
       categoryLabel: 'Bridles',
       specs: 'Ergonomic pressure-relief headpiece, curved channel-set Swarovski crystal browband, wide patent leather crank noseband, solid stainless steel buckles.',
@@ -30,7 +30,7 @@ export const SectionHaltersAndBridles: React.FC<SectionHaltersAndBridlesProps> =
     {
       id: 'sh-halter-01',
       image: 'http://aryezmiltex.com/halter1',
-      title: 'Siena Braided Halter Set',
+      title: 'PP Halter Suede Padding With Rope',
       category: 'halters',
       categoryLabel: 'Halters',
       specs: 'Hand-braided vegetable-tanned leather crown and noseband, matching terracotta lead rope with brass bull snap, heavy-duty solid brass hardware, adjustable chin strap.',
@@ -40,7 +40,7 @@ export const SectionHaltersAndBridles: React.FC<SectionHaltersAndBridlesProps> =
     {
       id: 'sh-bridle-04',
       image: 'https://aryezmiltex.com/birdle2',
-      title: 'Elite Padded Crank Bridle',
+      title: 'Anatomical Birdle Crystal Browband',
       category: 'bridles',
       categoryLabel: 'Bridles',
       specs: 'Full-grain English leather, ultra-plush white calfskin padded lining, Swedish crank closure with chin pad, rounded cheeks.',
@@ -50,7 +50,7 @@ export const SectionHaltersAndBridles: React.FC<SectionHaltersAndBridlesProps> =
     {
       id: 'sh-halter-02',
       image: 'http://aryezmiltex.com/halter2',
-      title: 'Grand Prix Shipping Halter',
+      title: 'PP Halter Mink Padding',
       category: 'halters',
       categoryLabel: 'Halters',
       specs: 'Full-grain English bridle leather, ultra-soft hypoallergenic fleece lining, dual-crown buckle adjustment, quick-snap throatlatch, polished stainless steel hardware.',
@@ -60,7 +60,7 @@ export const SectionHaltersAndBridles: React.FC<SectionHaltersAndBridlesProps> =
     {
       id: 'sh-bridle-06',
       image: 'https://aryezmiltex.com/birdle4',
-      title: 'Mexican Figure-8 Jump Bridle',
+      title: 'English Leather Birdle',
       category: 'bridles',
       categoryLabel: 'Bridles',
       specs: 'Figure-8 grackle noseband with real sheepskin center disk, anatomical crownpiece, stainless steel buckles, rubber grip reins.',
@@ -70,7 +70,7 @@ export const SectionHaltersAndBridles: React.FC<SectionHaltersAndBridlesProps> =
     {
       id: 'sh-halter-03',
       image: 'http://aryezmiltex.com/halter3',
-      title: 'Ergonomic Padded Halter',
+      title: 'PVC/Biothane Halter With Padding',
       category: 'halters',
       categoryLabel: 'Halters',
       specs: 'Contoured ergonomic crownpiece, soft calfskin padded noseband and cheeks, triple-ply reinforced stitching, brushed brass hardware with throat snap.',
@@ -80,7 +80,7 @@ export const SectionHaltersAndBridles: React.FC<SectionHaltersAndBridlesProps> =
     {
       id: 'sh-bridle-07',
       image: 'https://aryezmiltex.com/birdle5',
-      title: 'Rolled Leather Double Bridle',
+      title: 'English Leather Western Birdle',
       category: 'bridles',
       categoryLabel: 'Bridles',
       specs: 'Supple hand-rolled leather cheeks and throatlatch, wide anatomical crank noseband, includes two pairs of leather reins (snaffle and curb).',
@@ -90,7 +90,7 @@ export const SectionHaltersAndBridles: React.FC<SectionHaltersAndBridlesProps> =
     {
       id: 'sh-halter-04',
       image: 'http://aryezmiltex.com/halter4',
-      title: 'French Calfskin Show Halter',
+      title: 'PP Halter Mink Padding',
       category: 'halters',
       categoryLabel: 'Halters',
       specs: 'Double-stitched vegetable-tanned calfskin, customizable solid brass nameplate, rolled throatlatch, dual-crown adjustment, hand-burnished oil edges.',
@@ -100,7 +100,7 @@ export const SectionHaltersAndBridles: React.FC<SectionHaltersAndBridlesProps> =
     {
       id: 'sh-bridle-08',
       image: 'https://aryezmiltex.com/birdle6',
-      title: 'Ergonomic Flash Eventing Bridle',
+      title: 'English Leather Dressage Birdle',
       category: 'bridles',
       categoryLabel: 'Bridles',
       specs: 'Integrated anatomical crown with flush flash attachment, soft calfskin padded browband, stainless steel hardware, web reins included.',

@@ -6,7 +6,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   // ==========================================
   {
     id: 'sh-rug-01',
-    name: 'Premier Waterproof Turnout Rug with High Gusset',
+    name: 'Turnout Rug',
     category: 'rugs',
     categoryLabel: 'Rugs',
     image: 'https://aryezmiltex.com/rug1',
@@ -15,7 +15,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-rug-02',
-    name: 'All-Season Heavyweight Winter Turnout Blanket',
+    name: 'Winter Blanket',
     category: 'rugs',
     categoryLabel: 'Rugs',
     image: 'https://aryezmiltex.com/rug2',
@@ -24,7 +24,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-rug-03',
-    name: 'Anatomical Breathable Mesh Cooler & Anti-Sweat Sheet',
+    name: 'Cooler Sheet',
     category: 'rugs',
     categoryLabel: 'Rugs',
     image: 'https://aryezmiltex.com/rug3',
@@ -33,7 +33,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-rug-04',
-    name: 'Luxury Velvet Show Rug with Faux Sheepskin Collar',
+    name: 'Show Rug',
     category: 'rugs',
     categoryLabel: 'Rugs',
     image: 'https://aryezmiltex.com/rug4',
@@ -42,7 +42,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-rug-05',
-    name: 'Reflective Waterproof Light Turnout Sheet',
+    name: 'Turnout Sheet',
     category: 'rugs',
     categoryLabel: 'Rugs',
     image: 'https://aryezmiltex.com/rug5',
@@ -51,7 +51,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-rug-06',
-    name: 'Classic Wool Blend Stable Presentation Blanket',
+    name: 'Stable Blanket',
     category: 'rugs',
     categoryLabel: 'Rugs',
     image: 'https://aryezmiltex.com/rug6',
@@ -60,7 +60,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-rug-07',
-    name: 'UV Protection & Eczema Sweet Itch Shield Rug',
+    name: 'Fly Sheet',
     category: 'rugs',
     categoryLabel: 'Rugs',
     image: 'https://aryezmiltex.com/rug7',
@@ -73,7 +73,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   // ==========================================
   {
     id: 'sh-mask-01',
-    name: 'Ergonomic Fine Mesh Fly Mask with UV & Ear Protection',
+    name: 'Lycra Racing Fly Mask-Yellow',
     category: 'fly-masks-veils',
     categoryLabel: 'Fly Mask & Veils',
     image: 'https://aryezmiltex.com/mask1',
@@ -82,7 +82,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-mask-02',
-    name: 'Full Face Fly Mask with Removable Nose Extension',
+    name: 'Lycra Racing Fly Mask- Blue',
     category: 'fly-masks-veils',
     categoryLabel: 'Fly Mask & Veils',
     image: 'https://aryezmiltex.com/mask2',
@@ -91,7 +91,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-mask-03',
-    name: 'Acoustic Soundless Crochet Fly Veil with Lycra Ears',
+    name: 'Mesh WIth Lycra Ear Mask',
     category: 'fly-masks-veils',
     categoryLabel: 'Fly Mask & Veils',
     image: 'https://aryezmiltex.com/mask3',
@@ -100,7 +100,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-mask-04',
-    name: 'Grand Prix Crocheted Competition Ear Bonnet with Scalloped Edge',
+    name: 'Mesh WIth Lycra Ear Mask',
     category: 'fly-masks-veils',
     categoryLabel: 'Fly Mask & Veils',
     image: 'https://aryezmiltex.com/mask4',
@@ -109,7 +109,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-mask-05',
-    name: 'Streamlined Lycra Pull-On Eye & Bug Mask',
+    name: 'Mesh WIth Lycra Ear Mask',
     category: 'fly-masks-veils',
     categoryLabel: 'Fly Mask & Veils',
     image: 'https://aryezmiltex.com/mask5',
@@ -122,7 +122,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   // ==========================================
   {
     id: 'sh-girth-01',
-    name: 'Anatomical Memory Foam Dressage Girth in French Calfskin',
+    name: 'Anatomical Leather Girth',
     category: 'girth',
     categoryLabel: 'Girth',
     image: 'https://aryezmiltex.com/girth1',
@@ -131,7 +131,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-girth-02',
-    name: 'Stud Protector Jumping Girth with Reinforced Belly Guard',
+    name: 'Sheepskin Stud Girth Leather',
     category: 'girth',
     categoryLabel: 'Girth',
     image: 'https://aryezmiltex.com/girth2',
@@ -140,7 +140,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-girth-03',
-    name: 'Removable Medical Faux Sheepskin Anatomical Dressage Girth',
+    name: 'Sheepskin Stud Girth Leather',
     category: 'girth',
     categoryLabel: 'Girth',
     image: 'https://aryezmiltex.com/girth3',
@@ -149,7 +149,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-girth-04',
-    name: 'Waffle Neoprene Non-Slip Anti-Gall All-Purpose Girth',
+    name: 'Oil Pull up Leather Girth',
     category: 'girth',
     categoryLabel: 'Girth',
     image: 'https://aryezmiltex.com/girth4',
@@ -158,7 +158,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-girth-05',
-    name: 'Contoured Long Monoflap Eventing Girth with Magnet Buckles',
+    name: 'Wool Belly Gurad Girth',
     category: 'girth',
     categoryLabel: 'Girth',
     image: 'https://aryezmiltex.com/girth5',
@@ -171,7 +171,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   // ==========================================
   {
     id: 'sh-dog-01',
-    name: 'Saddlery Brass & Vegetable-Tanned Leather Dog Collar & Leash Set',
+    name: 'Dog Collar & Leash Set',
     category: 'dog-accessories',
     categoryLabel: 'Dog Accessories',
     image: 'https://aryezmiltex.com/dog1',
@@ -180,7 +180,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-dog-02',
-    name: 'Equestrian Padded Comfort Dog Harness with Brass Hardware',
+    name: 'Dog Harness',
     category: 'dog-accessories',
     categoryLabel: 'Dog Accessories',
     image: 'https://aryezmiltex.com/dog2',
@@ -189,7 +189,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-dog-03',
-    name: 'Heritage Diamond-Quilted Dog Country Winter Jacket',
+    name: 'Dog Jacket',
     category: 'dog-accessories',
     categoryLabel: 'Dog Accessories',
     image: 'https://aryezmiltex.com/dog3',
@@ -198,7 +198,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-dog-04',
-    name: 'Artisan Braided Leather Rope Dog Lead with Solid Brass Bull Snap',
+    name: 'Dog Lead',
     category: 'dog-accessories',
     categoryLabel: 'Dog Accessories',
     image: 'https://aryezmiltex.com/dog4',
@@ -211,7 +211,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   // ==========================================
   {
     id: 'sh-breastplate-01',
-    name: 'Anatomical 5-Point Competition Breastplate with Genuine Sheepskin',
+    name: '5-Point Breastplate',
     category: 'breastplates',
     categoryLabel: 'Breastplates',
     image: 'https://aryezmiltex.com/breastplate1',
@@ -220,7 +220,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-breastplate-02',
-    name: 'English Raised Leather 3-Point Hunting Breastplate',
+    name: '3-Point Breastplate',
     category: 'breastplates',
     categoryLabel: 'Breastplates',
     image: 'https://aryezmiltex.com/breastplate2',
@@ -229,7 +229,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-breastplate-03',
-    name: 'Monoflap Elastic Y-Fit Racing & Eventing Breastplate',
+    name: 'Racing Breastplate',
     category: 'breastplates',
     categoryLabel: 'Breastplates',
     image: 'https://aryezmiltex.com/breastplate3',
@@ -238,7 +238,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-breastplate-04',
-    name: 'Artisan Tooled Western & Endurance Breast Collar with Brass Rings',
+    name: 'Breast Collar',
     category: 'breastplates',
     categoryLabel: 'Breastplates',
     image: 'https://aryezmiltex.com/breastplate4',
@@ -251,7 +251,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   // ==========================================
   {
     id: 'sh-bridle-03',
-    name: 'Premier Monoflap Anatomical Dressage Bridle with Crystal Browband',
+    name: 'English Sanffle Birdle Polo Saddle',
     category: 'bridles',
     categoryLabel: 'Bridles',
     image: 'https://aryezmiltex.com/birdle1',
@@ -260,7 +260,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-bridle-04',
-    name: 'Elite Comfort Padded Crank Dressage Bridle with White Piping',
+    name: 'Anatomical Birdle Crystal Browband',
     category: 'bridles',
     categoryLabel: 'Bridles',
     image: 'https://aryezmiltex.com/birdle2',
@@ -269,7 +269,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-bridle-05',
-    name: 'Signature Square Raised Hunter Derby Bridle with Laced Reins',
+    name: 'English All Around Birdle Crystal Browband',
     category: 'bridles',
     categoryLabel: 'Bridles',
     image: 'https://aryezmiltex.com/birdle3',
@@ -278,7 +278,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-bridle-06',
-    name: 'Grand Prix Mexican Figure-8 Grackle Jumping Bridle',
+    name: 'English Leather Birdle',
     category: 'bridles',
     categoryLabel: 'Bridles',
     image: 'https://aryezmiltex.com/birdle4',
@@ -287,7 +287,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-bridle-07',
-    name: 'Artisan Rolled Leather Dressage Weymouth Double Bridle',
+    name: 'English Leather Western Birdle',
     category: 'bridles',
     categoryLabel: 'Bridles',
     image: 'https://aryezmiltex.com/birdle5',
@@ -296,7 +296,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-bridle-08',
-    name: 'Ergonomic Flash Noseband Schooling & Eventing Bridle',
+    name: 'English Leather Dressage Birdle',
     category: 'bridles',
     categoryLabel: 'Bridles',
     image: 'https://aryezmiltex.com/birdle6',
@@ -305,7 +305,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-bridle-09',
-    name: 'Baroque Spanish Presentation Bridle with Ornate Brass Buckles',
+    name: 'Anatomical All-Around Birdle',
     category: 'bridles',
     categoryLabel: 'Bridles',
     image: 'https://aryezmiltex.com/birdle7',
@@ -314,7 +314,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-bridle-10',
-    name: 'Western Floral Hand-Tooled Browband Headstall with Rawhide Trim',
+    name: 'PVC/Biothane Birdle',
     category: 'bridles',
     categoryLabel: 'Bridles',
     image: 'https://aryezmiltex.com/birdle8',
@@ -323,7 +323,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-bridle-11',
-    name: 'Vintage Distressed Western One-Ear Headstall with Silver Conchos',
+    name: 'Leather Snaffle Birdle',
     category: 'bridles',
     categoryLabel: 'Bridles',
     image: 'https://aryezmiltex.com/birdle9',
@@ -332,7 +332,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-bridle-12',
-    name: 'Modern Anatomic Drop Noseband Dressage Bridle in Noir',
+    name: 'Competition Flash Birdle',
     category: 'bridles',
     categoryLabel: 'Bridles',
     image: 'https://aryezmiltex.com/birdle10',
@@ -341,7 +341,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-bridle-13',
-    name: 'Endurance BioThane & Padded Bridle-Halter Combination',
+    name: 'PVC/Biothane Birdle',
     category: 'bridles',
     categoryLabel: 'Bridles',
     image: 'https://aryezmiltex.com/birdle11',
@@ -350,7 +350,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-bridle-14',
-    name: 'Anatomical Wave Wave-Shaped Padded Snaffle Bridle',
+    name: 'PVC/Biothane Birdle',
     category: 'bridles',
     categoryLabel: 'Bridles',
     image: 'https://aryezmiltex.com/birdle12',
@@ -359,7 +359,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-bridle-15',
-    name: 'Competition Monoflap Jump Bridle with Elastic Insert Cheeks',
+    name: 'PVC/Biothane Birdle',
     category: 'bridles',
     categoryLabel: 'Bridles',
     image: 'https://aryezmiltex.com/birdle13',
@@ -368,7 +368,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-bridle-16',
-    name: 'Classic Full-Grain English Cavesson Schooling Bridle',
+    name: 'PVC/Biothane Birdle',
     category: 'bridles',
     categoryLabel: 'Bridles',
     image: 'https://aryezmiltex.com/birdle14',
@@ -377,7 +377,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-bridle-17',
-    name: 'Atelier Bespoke Rose Gold & Patent Leather Dressage Bridle',
+    name: 'PVC/Biothane Birdle',
     category: 'bridles',
     categoryLabel: 'Bridles',
     image: 'https://aryezmiltex.com/birdle15',
@@ -390,7 +390,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   // ==========================================
   {
     id: 'sh-belt-01',
-    name: 'Artisan Vegetable-Tanned Stirrup Buckle Leather Belt',
+    name: 'Stirrup Buckle Belt',
     category: 'belt',
     categoryLabel: 'Belt',
     image: 'https://aryezmiltex.com/belt1',
@@ -399,7 +399,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-belt-02',
-    name: 'Western Hand-Tooled Floral Leather Belt with Antiqued Silver Buckle',
+    name: 'Western Belt',
     category: 'belt',
     categoryLabel: 'Belt',
     image: 'https://aryezmiltex.com/belt2',
@@ -408,7 +408,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-belt-03',
-    name: 'Argentine Embroidered Polo Belt with Navy & Cream Threading',
+    name: 'Polo Belt',
     category: 'belt',
     categoryLabel: 'Belt',
     image: 'https://aryezmiltex.com/belt3',
@@ -417,7 +417,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-belt-04',
-    name: 'Genuine Hair-On Cowhide & Croc-Embossed Western Belt',
+    name: 'Hair-On Western Belt',
     category: 'belt',
     categoryLabel: 'Belt',
     image: 'https://aryezmiltex.com/belt4',
@@ -426,7 +426,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-belt-05',
-    name: 'Equestrian Snaffle Bit Buckle Reversible Leather Belt',
+    name: 'Snaffle Bit Belt',
     category: 'belt',
     categoryLabel: 'Belt',
     image: 'https://aryezmiltex.com/belt5',
@@ -435,7 +435,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-belt-06',
-    name: 'Rawhide Braided & Hand-Carved Tooled Leather Belt',
+    name: 'Braided Western Belt',
     category: 'belt',
     categoryLabel: 'Belt',
     image: 'https://aryezmiltex.com/belt6',
@@ -444,7 +444,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-belt-07',
-    name: 'Classic Stitched English Bridle Leather Dress Belt',
+    name: 'Dress Belt',
     category: 'belt',
     categoryLabel: 'Belt',
     image: 'https://aryezmiltex.com/belt7',
@@ -453,7 +453,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-belt-08',
-    name: 'Turquoise Stone Inlay Hand-Tooled Western Leather Belt',
+    name: 'Turquoise Inlay Western Belt',
     category: 'belt',
     categoryLabel: 'Belt',
     image: 'https://aryezmiltex.com/belt8',
@@ -462,7 +462,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-belt-09',
-    name: 'Hand-Woven Multi-Color Pampa Diamond Gaucho Belt',
+    name: 'Diamond Gaucho Belt',
     category: 'belt',
     categoryLabel: 'Belt',
     image: 'https://aryezmiltex.com/belt9',
@@ -471,7 +471,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-belt-10',
-    name: 'Heavy-Duty Oil-Tanned Work & Holster Leather Belt',
+    name: 'Heavy-Duty Work Belt',
     category: 'belt',
     categoryLabel: 'Belt',
     image: 'https://aryezmiltex.com/belt10',
@@ -480,7 +480,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-belt-11',
-    name: 'Crystal Studded & Floral Filigree Championship Show Belt',
+    name: 'Crystal Show Belt',
     category: 'belt',
     categoryLabel: 'Belt',
     image: 'https://aryezmiltex.com/belt11',
@@ -489,7 +489,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-belt-12',
-    name: 'Two-Tone Cognac & Espresso Hand-Stitched Leather Belt',
+    name: 'Two-Tone Dress Belt',
     category: 'belt',
     categoryLabel: 'Belt',
     image: 'https://aryezmiltex.com/belt12',
@@ -498,7 +498,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-belt-13',
-    name: 'Basketweave Tooled Saddle Leather Utility Belt',
+    name: 'Utility Belt',
     category: 'belt',
     categoryLabel: 'Belt',
     image: 'https://aryezmiltex.com/belt13',
@@ -507,7 +507,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-belt-14',
-    name: 'Braided Kangaroo & Latigo Leather Casual Belt',
+    name: 'Casual Belt',
     category: 'belt',
     categoryLabel: 'Belt',
     image: 'https://aryezmiltex.com/belt14',
@@ -516,7 +516,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-belt-15',
-    name: 'Patina Pull-Up Vintage Distressed Cowboy Belt',
+    name: 'Cowboy Belt',
     category: 'belt',
     categoryLabel: 'Belt',
     image: 'https://aryezmiltex.com/belt15',
@@ -525,7 +525,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-belt-16',
-    name: 'Polo Mallet Embossed Luxury French Calfskin Belt',
+    name: 'Polo Mallet Belt',
     category: 'belt',
     categoryLabel: 'Belt',
     image: 'https://aryezmiltex.com/belt16',
@@ -534,7 +534,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-belt-17',
-    name: 'Concho Studded Scalloped Western Leather Belt',
+    name: 'Concho Western Belt',
     category: 'belt',
     categoryLabel: 'Belt',
     image: 'https://aryezmiltex.com/belt17',
@@ -543,7 +543,7 @@ export const ADDITIONAL_CATALOG_PRODUCTS: CatalogProductDetail[] = [
   },
   {
     id: 'sh-belt-18',
-    name: 'Heritage Double-Buckle Field & Hunt Leather Belt',
+    name: 'Double-Buckle Field Belt',
     category: 'belt',
     categoryLabel: 'Belt',
     image: 'https://aryezmiltex.com/belt18',

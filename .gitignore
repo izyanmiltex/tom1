@@ -25,3 +25,7 @@ pnpm-debug.log*
 # AI Studio internal artifacts
 .aistudio/
 public/selleria-luxury.zip
+-e 
+public/*.zip
+public/assets/aistudio/
+public/.htaccess

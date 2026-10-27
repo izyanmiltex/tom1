@@ -1,0 +1,171 @@
+@import "tailwindcss";
+
+@theme {
+  --color-forest-950: #0F2B18;
+  --color-forest-900: #1E5631;
+  --color-forest-800: #184728;
+  --color-forest-700: #1E5631;
+  --color-forest-600: #287040;
+  --color-forest-500: #358D52;
+  --color-forest-400: #57A37D;
+  --color-forest-300: #8DC4A7;
+  --color-forest-200: #BDE0CE;
+  --color-forest-100: #DFEFE6;
+  --color-forest-50: #F0F6F2;
+  --color-forest: #1E5631;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #111111;
+    background-color: #ffffff;
+  }
+  ::selection {
+    background-color: #1E5631;
+    color: #ffffff;
+  }
+}
+
+.font-serif-brand {
+  font-family: 'Bodoni Moda', 'Playfair Display', 'Cinzel', Georgia, serif;
+  letter-spacing: 0.2em;
+}
+
+.font-didot {
+  font-family: 'Bodoni Moda', 'Playfair Display', Georgia, serif;
+}
+
+/* Exact typography classes specified for Ralph Lauren */
+.font-rl-heading {
+  font-family: RL_DroidKufi, "Founders Grotesk text Regular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12.6500px; /* Reduced by 10% from 14.0556px */
+  line-height: normal;
+  color: #FFFFFF;
+}
+
+.font-rl-description {
+  font-family: RL_DroidKufi, SackersGothicW01-Medium, "Cinzel", "Montserrat", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 850;
+  font-size: 15.8125px;
+  line-height: 18.6875px;
+  letter-spacing: 0.28em;
+}
+
+.font-rl-button {
+  font-family: RL_DroidKufi, "Founders Grotesk text Regular", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 9.66319px;
+  line-height: normal;
+  letter-spacing: 0.25em;
+  color: #FFFFFF;
+}
+
+.font-rl-popular-products {
+  font-family: LeJeuneDeck-Regular, "Times New Roman", Times, serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 65.875px;
+  line-height: 77.8523px;
+}
+
+.font-rl-menu {
+  font-family: RL_DroidKufi, "Founders Grotesk Mono Regular", "Montserrat", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 11px;
+  line-height: 10px;
+  letter-spacing: 0.2em;
+}
+
+.font-rl-announcement {
+  font-family: RL_DroidKufi, "Founders Grotesk text Regular", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 16px;
+}
+
+/* Grid Sections Typography (Polo Heritage, Luxury Suits, Kids, Home, Runway, etc.) */
+.font-rl-grid-subtitle,
+.font-rl-subtitle-polo {
+  font-family: RL_DroidKufi, "Founders Grotesk text Regular", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10.9398px; /* Decreased by 10% from 12.1553px */
+  line-height: normal;
+  color: #ffffff;
+  letter-spacing: 0.22em;
+}
+
+.font-rl-grid-heading,
+.font-rl-heading-polo {
+  font-family: "Times New Roman", Times, RL_DroidKufi, "Founders Grotesk text Regular", Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 56.0612px; /* Increased by 40% from 40.0437px */
+  line-height: normal;
+  color: #ffffff;
+}
+
+.font-rl-grid-description,
+.font-rl-description-polo {
+  font-family: "Times New Roman", Times, RL_DroidKufi, LeJeuneDeck-Regular, Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17.5521px; /* Reduced by 5% from 18.4759px */
+  line-height: 23.9054px; /* Reduced by 5% from 25.1636px */
+  color: #ffffff;
+}
+
+.font-rl-grid-button,
+.font-rl-button-polo {
+  font-family: RL_DroidKufi, "Founders Grotesk text Regular", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12.6841px; /* Reduced by 15% from 14.9225px */
+  line-height: normal;
+  color: #ffffff;
+  letter-spacing: 0.22em;
+}
+
+.font-cormorant {
+  font-family: 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-sans-clean {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Custom scrollbar for sleek luxury presentation */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f5f5f5;
+}
+::-webkit-scrollbar-thumb {
+  background: #000000;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #262626;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Ralph Lauren Replica",
+  "description": "A luxury equestrian and leather goods website for Selleria Luxury, featuring bespoke OEM manufacturing, horse riding equipment, garments, world export network, and direct inquiries.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -355,16 +355,17 @@ Recipient: ${TARGET_NAME} <${TARGET_EMAIL}>`;
                   </div>
                 ) : (
                   <form
-                    name="contact"
+                    action="https://shipmyform.com/to/info@selleriahouse.com"
                     method="POST"
-                    data-netlify="true"
-                    data-netlify-honeypot="bot-field"
-                    onSubmit={handleSubmit}
                     className="space-y-4"
                   >
-                    <input type="hidden" name="form-name" value="contact" />
-                    <input type="hidden" name="to_email" value={TARGET_EMAIL} />
-                    <input type="hidden" name="recipient_name" value={TARGET_NAME} />
+                    <input type="hidden" name="_subject" value={`New Equestrian Export Inquiry from ${formData.name || 'Website Client'} [${formData.category}]`} />
+                    <input
+                      type="hidden"
+                      name="_redirect"
+                      value={typeof window !== 'undefined' ? `${window.location.origin}/contact?status=success` : 'https://selleriah.netlify.app/contact?status=success'}
+                    />
+                    <input type="text" name="_gotcha" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <label
@@ -494,24 +495,41 @@ Recipient: ${TARGET_NAME} <${TARGET_EMAIL}>`;
                     <div className="pt-2">
                       <button
                         type="submit"
-                        disabled={isSending}
-                        className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#1E5631] text-white hover:bg-[#164225] disabled:bg-neutral-400 font-semibold text-xs uppercase tracking-wider transition-colors shadow-md cursor-pointer"
+                        className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#1E5631] text-white hover:bg-[#164225] font-semibold text-xs uppercase tracking-wider transition-colors shadow-md cursor-pointer"
                         style={{
                           fontFamily: 'RL_DroidKufi, "Founders Grotesk text Regular", Arial, Helvetica, sans-serif',
                         }}
                       >
-                        {isSending ? (
-                          <>
-                            <div className="w-3.5 h-3.5 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                            <span>Transmitting to {TARGET_EMAIL}...</span>
-                          </>
-                        ) : (
-                          <>
-                            <Send className="w-3.5 h-3.5" />
-                            <span>Send to Abhishek Goel ({TARGET_EMAIL})</span>
-                          </>
-                        )}
+                        <Send className="w-3.5 h-3.5" />
+                        <span>Send to Abhishek Goel ({TARGET_EMAIL})</span>
                       </button>
+
+                      {/* Direct alternative options right below button */}
+                      <div className="pt-3 border-t border-neutral-200 mt-2 space-y-2">
+                        <div className="text-center text-[10px] uppercase tracking-wider text-neutral-500 font-medium">
+                          Or click below for instant direct contact:
+                        </div>
+                        <div className="grid grid-cols-2 gap-2">
+                          <a
+                            href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(`${TARGET_NAME} <${TARGET_EMAIL}>`)}&su=${encodeURIComponent(getEmailContent().subject)}&body=${encodeURIComponent(getEmailContent().body)}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl border border-neutral-300 hover:border-[#1E5631] hover:text-[#1E5631] text-neutral-800 text-[11px] font-semibold transition-colors bg-white shadow-xs"
+                          >
+                            <Mail className="w-3.5 h-3.5 text-[#1E5631]" />
+                            <span>1-Click Gmail</span>
+                          </a>
+                          <a
+                            href="https://wa.me/918874722226"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center justify-center gap-1.5 py-2.5 px-3 rounded-xl border border-neutral-300 hover:border-[#25D366] hover:text-[#25D366] text-neutral-800 text-[11px] font-semibold transition-colors bg-white shadow-xs"
+                          >
+                            <WhatsAppIcon className="w-3.5 h-3.5 text-[#25D366]" />
+                            <span>Chat WhatsApp</span>
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </form>
                 )}

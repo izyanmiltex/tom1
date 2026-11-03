@@ -53,13 +53,23 @@
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "customer service",
-        "email": "info@seleriahouse.com",
+        "email": "info@selleriahouse.com",
         "availableLanguage": ["English", "Hindi"]
       }
     }
     </script>
   </head>
   <body class="bg-white text-neutral-900 antialiased selection:bg-[#1E5631] selection:text-white">
+    <!-- Netlify static prerender form so Netlify Forms processes submissions to info@selleriahouse.com -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="email" name="email" />
+      <input type="tel" name="phone" />
+      <input type="text" name="country" />
+      <input type="text" name="category" />
+      <textarea name="message"></textarea>
+      <input type="hidden" name="to_email" value="info@selleriahouse.com" />
+    </form>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

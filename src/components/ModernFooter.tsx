@@ -183,9 +183,9 @@ export const ModernFooter: React.FC<ModernFooterProps> = ({
                 </a>
               </li>
               <li>
-                <a href="mailto:info@seleriahouse.com" className="hover:text-[#A2D4B1] transition-colors flex items-center gap-2.5">
+                <a href="mailto:info@selleriahouse.com" className="hover:text-[#A2D4B1] transition-colors flex items-center gap-2.5">
                   <Mail className="w-3.5 h-3.5 text-[#A2D4B1] shrink-0" />
-                  <span>info@seleriahouse.com</span>
+                  <span>info@selleriahouse.com</span>
                 </a>
               </li>
               <li className="text-neutral-400 flex items-start gap-2.5 pt-1 text-[11px]">

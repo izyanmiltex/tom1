@@ -30,47 +30,80 @@ export const ContactPage: React.FC<ContactPageProps> = () => {
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSending, setIsSending] = useState(false);
   const [activeMapLayer, setActiveMapLayer] = useState<'logistics' | 'satellite'>('logistics');
 
-  const TARGET_EMAIL = 'info@seleriahouse.com';
+  const TARGET_EMAIL = 'info@selleriahouse.com';
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitted(true);
+  const getEmailContent = () => {
+    const subject = `Equestrian Inquiry: ${formData.category || 'All Products'} - ${formData.name || 'Client'}`;
+    const body = 
+`Hello Selleria Luxury Team,
 
-    const subject = encodeURIComponent(`Equestrian Inquiry: ${formData.category} - ${formData.name}`);
-    const bodyText = 
-`New Inquiry received from Selleria Luxury Contact Form:
+I am writing to inquire regarding your luxury equestrian manufacturing and export services.
 
-Full Name: ${formData.name}
-Business Email: ${formData.email}
-Phone / WhatsApp: ${formData.phone || 'Not provided'}
-Country / Region: ${formData.country || 'Not provided'}
-Product Interest: ${formData.category}
+Client Details:
+- Name: ${formData.name || 'Not provided'}
+- Business Email: ${formData.email || 'Not provided'}
+- Phone / WhatsApp: ${formData.phone || 'Not provided'}
+- Country / Region: ${formData.country || 'Not provided'}
+- Product Category of Interest: ${formData.category || 'General Inquiry'}
 
-Message & Requirements:
-${formData.message}
+Requirements & Message:
+${formData.message || 'Please send your export catalog and price list.'}
 
+---
+Sent via Selleria Luxury Official Website
 Recipient: ${TARGET_EMAIL}`;
+    return { subject, body };
+  };
 
-    // Submit to Netlify background form handler if available
-    try {
-      fetch('/', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: new URLSearchParams({
-          'form-name': 'contact',
-          'to_email': TARGET_EMAIL,
-          ...formData,
-        }).toString(),
-      }).catch(() => {});
-    } catch {
-      // ignore
-    }
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSending(true);
 
-    // Direct mail client launch to info@seleriahouse.com
-    const mailtoUrl = `mailto:${TARGET_EMAIL}?subject=${subject}&body=${encodeURIComponent(bodyText)}`;
-    window.location.href = mailtoUrl;
+    const { subject } = getEmailContent();
+
+    // 1. Submit directly to FormSubmit background endpoint
+    const formSubmitPromise = fetch(`https://formsubmit.co/ajax/${TARGET_EMAIL}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json',
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone || 'N/A',
+        country: formData.country || 'N/A',
+        category: formData.category,
+        message: formData.message,
+        _subject: subject,
+        _replyto: formData.email,
+        _template: 'table',
+        _captcha: 'false',
+      }),
+    }).catch(() => null);
+
+    // 2. Submit to Netlify form handler
+    const netlifyPromise = fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams({
+        'form-name': 'contact',
+        'to_email': TARGET_EMAIL,
+        ...formData,
+      }).toString(),
+    }).catch(() => null);
+
+    // Give network calls up to 1.5 seconds to dispatch
+    await Promise.race([
+      Promise.allSettled([formSubmitPromise, netlifyPromise]),
+      new Promise((resolve) => setTimeout(resolve, 1500)),
+    ]);
+
+    setIsSending(false);
+    setIsSubmitted(true);
   };
 
   const handleWhatsAppDirect = () => {
@@ -165,10 +198,10 @@ Recipient: ${TARGET_EMAIL}`;
                   Official Email
                 </h3>
                 <a
-                  href="mailto:info@seleriahouse.com"
+                  href="mailto:info@selleriahouse.com"
                   className="text-xs text-[#1E5631] font-semibold hover:underline block mb-0.5"
                 >
-                  info@seleriahouse.com
+                  info@selleriahouse.com
                 </a>
                 <p className="text-[11px] text-neutral-500 font-light">Direct response within 4 hours</p>
               </div>
@@ -221,39 +254,71 @@ Recipient: ${TARGET_EMAIL}`;
                 </p>
 
                 {isSubmitted ? (
-                  <div className="p-6 rounded-xl bg-[#F0F6F2] border border-[#1E5631]/30 text-center space-y-4">
-                    <CheckCircle2 className="w-10 h-10 text-[#1E5631] mx-auto" />
+                  <div className="p-6 sm:p-8 rounded-xl bg-[#F0F6F2] border border-[#1E5631]/30 text-center space-y-4 animate-in fade-in duration-300">
+                    <CheckCircle2 className="w-12 h-12 text-[#1E5631] mx-auto" />
                     <h4
-                      className="text-base font-bold text-black uppercase tracking-wider"
+                      className="text-lg font-bold text-black uppercase tracking-wider"
                       style={{
                         fontFamily: 'RL_DroidKufi, "Founders Grotesk text Regular", Arial, Helvetica, sans-serif',
                       }}
                     >
-                      Inquiry Dispatched to info@seleriahouse.com
+                      Inquiry Dispatched to {TARGET_EMAIL}
                     </h4>
                     <p
-                      className="text-xs text-neutral-700 leading-relaxed font-light"
+                      className="text-xs text-neutral-700 leading-relaxed font-light max-w-md mx-auto"
                       style={{ fontFamily: '"Times New Roman", Times, Georgia, serif' }}
                     >
-                      Thank you, {formData.name || 'valued customer'}. Your inquiry has been routed directly to <strong className="font-semibold text-black">info@seleriahouse.com</strong>. We will reply to your email at <strong className="font-semibold text-black">{formData.email}</strong> within 4 hours.
+                      Thank you, <strong className="font-semibold text-black">{formData.name || 'valued customer'}</strong>. Your inquiry has been routed to our direct export desk at <strong className="font-semibold text-[#1E5631] underline">{TARGET_EMAIL}</strong>. We will reply to your email at <strong className="font-semibold text-black">{formData.email}</strong> within 4 business hours.
                     </p>
-                    <div className="pt-2 flex flex-col sm:flex-row items-center justify-center gap-2">
-                      <a
-                        href={`mailto:info@seleriahouse.com?subject=${encodeURIComponent(`Inquiry from ${formData.name} [${formData.category}]`)}&body=${encodeURIComponent(`Name: ${formData.name}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nCountry: ${formData.country}\nCategory: ${formData.category}\n\nMessage:\n${formData.message}`)}`}
-                        className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-[#1E5631] text-white hover:bg-[#164225] text-xs font-semibold uppercase tracking-wider transition-all shadow-sm"
-                      >
-                        <Mail className="w-3.5 h-3.5" />
-                        <span>Send via Email Client</span>
-                      </a>
+
+                    {/* Instant Direct Send Options */}
+                    <div className="pt-3 pb-1 space-y-2.5">
+                      <p className="text-[11px] font-semibold uppercase tracking-wider text-neutral-600">
+                        Confirm or send directly via your preferred platform:
+                      </p>
+                      <div className="flex flex-col sm:flex-row items-center justify-center gap-2.5">
+                        {/* 1-Click Web Gmail */}
+                        <a
+                          href={`https://mail.google.com/mail/?view=cm&fs=1&to=${TARGET_EMAIL}&su=${encodeURIComponent(getEmailContent().subject)}&body=${encodeURIComponent(getEmailContent().body)}`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-[#1E5631] text-white hover:bg-[#164225] text-xs font-semibold uppercase tracking-wider transition-all shadow-sm cursor-pointer"
+                        >
+                          <Mail className="w-3.5 h-3.5" />
+                          <span>Send via Gmail Web</span>
+                        </a>
+
+                        {/* Default Mail App (Outlook / Apple Mail) */}
+                        <a
+                          href={`mailto:${TARGET_EMAIL}?subject=${encodeURIComponent(getEmailContent().subject)}&body=${encodeURIComponent(getEmailContent().body)}`}
+                          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-white text-neutral-800 hover:text-black hover:border-black border border-neutral-300 text-xs font-semibold uppercase tracking-wider transition-all shadow-xs"
+                        >
+                          <Mail className="w-3.5 h-3.5 text-neutral-600" />
+                          <span>Apple Mail / Outlook</span>
+                        </a>
+
+                        {/* WhatsApp */}
+                        <button
+                          type="button"
+                          onClick={handleWhatsAppDirect}
+                          className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-full bg-[#25D366] text-white hover:bg-[#1ebe5d] text-xs font-semibold uppercase tracking-wider transition-all shadow-xs cursor-pointer"
+                        >
+                          <WhatsAppIcon className="w-3.5 h-3.5" />
+                          <span>WhatsApp</span>
+                        </button>
+                      </div>
+                    </div>
+
+                    <div className="pt-2">
                       <button
                         type="button"
                         onClick={() => {
                           setIsSubmitted(false);
                           setFormData({ name: '', email: '', phone: '', country: '', category: 'all', message: '' });
                         }}
-                        className="inline-flex items-center justify-center px-4 py-2.5 rounded-full border border-neutral-300 text-neutral-700 hover:text-black text-xs font-medium uppercase tracking-wider transition-all"
+                        className="text-xs text-neutral-500 hover:text-black underline cursor-pointer"
                       >
-                        New Message
+                        Submit another inquiry
                       </button>
                     </div>
                   </div>
@@ -261,13 +326,18 @@ Recipient: ${TARGET_EMAIL}`;
                   <form
                     name="contact"
                     method="POST"
+                    action={`https://formsubmit.co/${TARGET_EMAIL}`}
                     data-netlify="true"
                     data-netlify-honeypot="bot-field"
                     onSubmit={handleSubmit}
                     className="space-y-4"
                   >
                     <input type="hidden" name="form-name" value="contact" />
-                    <input type="hidden" name="recipient_email" value="info@seleriahouse.com" />
+                    <input type="hidden" name="to_email" value={TARGET_EMAIL} />
+                    <input type="hidden" name="_captcha" value="false" />
+                    <input type="hidden" name="_template" value="table" />
+                    <input type="hidden" name="_subject" value={`New Inquiry from ${formData.name || 'Website'} [${formData.category}] - Selleria Luxury`} />
+                    <input type="hidden" name="_replyto" value={formData.email} />
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <label
@@ -397,13 +467,23 @@ Recipient: ${TARGET_EMAIL}`;
                     <div className="pt-2">
                       <button
                         type="submit"
-                        className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#1E5631] text-white hover:bg-[#164225] font-semibold text-xs uppercase tracking-wider transition-colors shadow-md cursor-pointer"
+                        disabled={isSending}
+                        className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#1E5631] text-white hover:bg-[#164225] disabled:bg-neutral-400 font-semibold text-xs uppercase tracking-wider transition-colors shadow-md cursor-pointer"
                         style={{
                           fontFamily: 'RL_DroidKufi, "Founders Grotesk text Regular", Arial, Helvetica, sans-serif',
                         }}
                       >
-                        <Send className="w-3.5 h-3.5" />
-                        <span>Send Message</span>
+                        {isSending ? (
+                          <>
+                            <div className="w-3.5 h-3.5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                            <span>Transmitting to {TARGET_EMAIL}...</span>
+                          </>
+                        ) : (
+                          <>
+                            <Send className="w-3.5 h-3.5" />
+                            <span>Send Message to {TARGET_EMAIL}</span>
+                          </>
+                        )}
                       </button>
                     </div>
                   </form>

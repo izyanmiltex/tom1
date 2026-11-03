@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {
   Mail,
   MapPin,
@@ -11,6 +11,9 @@ import {
   Plane,
   ShieldCheck,
   Compass,
+  Copy,
+  Check,
+  ExternalLink,
 } from 'lucide-react';
 import { WhatsAppIcon } from './WhatsAppIcon';
 import { HeroLakeSection } from './HeroLakeSection';
@@ -31,18 +34,29 @@ export const ContactPage: React.FC<ContactPageProps> = () => {
 
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSending, setIsSending] = useState(false);
+  const [isCopied, setIsCopied] = useState(false);
   const [activeMapLayer, setActiveMapLayer] = useState<'logistics' | 'satellite'>('logistics');
 
+  const TARGET_NAME = 'Abhishek Goel';
   const TARGET_EMAIL = 'info@selleriahouse.com';
+
+  useEffect(() => {
+    // Check if user was redirected back after successful form submission
+    if (typeof window !== 'undefined') {
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('status') === 'success' || params.get('submitted') === 'true') {
+        setIsSubmitted(true);
+      }
+    }
+  }, []);
 
   const getEmailContent = () => {
     const subject = `Equestrian Inquiry: ${formData.category || 'All Products'} - ${formData.name || 'Client'}`;
     const body = 
-`Hello Selleria Luxury Team,
+`Attn: ${TARGET_NAME}
+Selleria Luxury Export Desk
 
-I am writing to inquire regarding your luxury equestrian manufacturing and export services.
-
-Client Details:
+Client Inquiry Details:
 - Name: ${formData.name || 'Not provided'}
 - Business Email: ${formData.email || 'Not provided'}
 - Phone / WhatsApp: ${formData.phone || 'Not provided'}
@@ -54,56 +68,20 @@ ${formData.message || 'Please send your export catalog and price list.'}
 
 ---
 Sent via Selleria Luxury Official Website
-Recipient: ${TARGET_EMAIL}`;
+Recipient: ${TARGET_NAME} <${TARGET_EMAIL}>`;
     return { subject, body };
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleCopyMessage = () => {
+    const { body } = getEmailContent();
+    navigator.clipboard.writeText(body);
+    setIsCopied(true);
+    setTimeout(() => setIsCopied(false), 3000);
+  };
+
+  const handleSubmit = () => {
     setIsSending(true);
-
-    const { subject } = getEmailContent();
-
-    // 1. Submit directly to FormSubmit background endpoint
-    const formSubmitPromise = fetch(`https://formsubmit.co/ajax/${TARGET_EMAIL}`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-      },
-      body: JSON.stringify({
-        name: formData.name,
-        email: formData.email,
-        phone: formData.phone || 'N/A',
-        country: formData.country || 'N/A',
-        category: formData.category,
-        message: formData.message,
-        _subject: subject,
-        _replyto: formData.email,
-        _template: 'table',
-        _captcha: 'false',
-      }),
-    }).catch(() => null);
-
-    // 2. Submit to Netlify form handler
-    const netlifyPromise = fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams({
-        'form-name': 'contact',
-        'to_email': TARGET_EMAIL,
-        ...formData,
-      }).toString(),
-    }).catch(() => null);
-
-    // Give network calls up to 1.5 seconds to dispatch
-    await Promise.race([
-      Promise.allSettled([formSubmitPromise, netlifyPromise]),
-      new Promise((resolve) => setTimeout(resolve, 1500)),
-    ]);
-
-    setIsSending(false);
-    setIsSubmitted(true);
+    // Allow native browser form submission to https://formsubmit.co/info@selleriahouse.com
   };
 
   const handleWhatsAppDirect = () => {
@@ -197,6 +175,9 @@ Recipient: ${TARGET_EMAIL}`;
                 >
                   Official Email
                 </h3>
+                <span className="text-[11px] font-semibold text-neutral-800 block">
+                  Abhishek Goel
+                </span>
                 <a
                   href="mailto:info@selleriahouse.com"
                   className="text-xs text-[#1E5631] font-semibold hover:underline block mb-0.5"
@@ -262,38 +243,39 @@ Recipient: ${TARGET_EMAIL}`;
                         fontFamily: 'RL_DroidKufi, "Founders Grotesk text Regular", Arial, Helvetica, sans-serif',
                       }}
                     >
-                      Inquiry Dispatched to {TARGET_EMAIL}
+                      Inquiry Addressed to {TARGET_NAME} ({TARGET_EMAIL})
                     </h4>
                     <p
                       className="text-xs text-neutral-700 leading-relaxed font-light max-w-md mx-auto"
                       style={{ fontFamily: '"Times New Roman", Times, Georgia, serif' }}
                     >
-                      Thank you, <strong className="font-semibold text-black">{formData.name || 'valued customer'}</strong>. Your inquiry has been routed to our direct export desk at <strong className="font-semibold text-[#1E5631] underline">{TARGET_EMAIL}</strong>. We will reply to your email at <strong className="font-semibold text-black">{formData.email}</strong> within 4 business hours.
+                      Thank you, <strong className="font-semibold text-black">{formData.name || 'valued customer'}</strong>. Your inquiry has been prepared directly for <strong className="font-semibold text-[#1E5631]">{TARGET_NAME}</strong> at <strong className="font-semibold text-[#1E5631] underline">{TARGET_EMAIL}</strong>.
                     </p>
 
                     {/* Instant Direct Send Options */}
-                    <div className="pt-3 pb-1 space-y-2.5">
-                      <p className="text-[11px] font-semibold uppercase tracking-wider text-neutral-600">
-                        Confirm or send directly via your preferred platform:
+                    <div className="pt-2 pb-1 space-y-3">
+                      <p className="text-[11px] font-semibold uppercase tracking-wider text-neutral-800">
+                        Choose your preferred way to transmit:
                       </p>
-                      <div className="flex flex-col sm:flex-row items-center justify-center gap-2.5">
+                      
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 max-w-lg mx-auto">
                         {/* 1-Click Web Gmail */}
                         <a
-                          href={`https://mail.google.com/mail/?view=cm&fs=1&to=${TARGET_EMAIL}&su=${encodeURIComponent(getEmailContent().subject)}&body=${encodeURIComponent(getEmailContent().body)}`}
+                          href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(`${TARGET_NAME} <${TARGET_EMAIL}>`)}&su=${encodeURIComponent(getEmailContent().subject)}&body=${encodeURIComponent(getEmailContent().body)}`}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-[#1E5631] text-white hover:bg-[#164225] text-xs font-semibold uppercase tracking-wider transition-all shadow-sm cursor-pointer"
+                          className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-[#1E5631] text-white hover:bg-[#164225] text-xs font-semibold uppercase tracking-wider transition-all shadow-sm cursor-pointer group"
                         >
-                          <Mail className="w-3.5 h-3.5" />
+                          <Mail className="w-4 h-4 text-white group-hover:scale-110 transition-transform" />
                           <span>Send via Gmail Web</span>
                         </a>
 
                         {/* Default Mail App (Outlook / Apple Mail) */}
                         <a
                           href={`mailto:${TARGET_EMAIL}?subject=${encodeURIComponent(getEmailContent().subject)}&body=${encodeURIComponent(getEmailContent().body)}`}
-                          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-full bg-white text-neutral-800 hover:text-black hover:border-black border border-neutral-300 text-xs font-semibold uppercase tracking-wider transition-all shadow-xs"
+                          className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-white text-neutral-800 hover:text-black hover:border-black border border-neutral-300 text-xs font-semibold uppercase tracking-wider transition-all shadow-xs group"
                         >
-                          <Mail className="w-3.5 h-3.5 text-neutral-600" />
+                          <ExternalLink className="w-4 h-4 text-neutral-600 group-hover:scale-110 transition-transform" />
                           <span>Apple Mail / Outlook</span>
                         </a>
 
@@ -301,10 +283,29 @@ Recipient: ${TARGET_EMAIL}`;
                         <button
                           type="button"
                           onClick={handleWhatsAppDirect}
-                          className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-full bg-[#25D366] text-white hover:bg-[#1ebe5d] text-xs font-semibold uppercase tracking-wider transition-all shadow-xs cursor-pointer"
+                          className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-[#25D366] text-white hover:bg-[#1ebe5d] text-xs font-semibold uppercase tracking-wider transition-all shadow-xs cursor-pointer group"
                         >
-                          <WhatsAppIcon className="w-3.5 h-3.5" />
-                          <span>WhatsApp</span>
+                          <WhatsAppIcon className="w-4 h-4 group-hover:scale-110 transition-transform" />
+                          <span>Chat on WhatsApp</span>
+                        </button>
+
+                        {/* Copy Full Message */}
+                        <button
+                          type="button"
+                          onClick={handleCopyMessage}
+                          className="inline-flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-neutral-100 hover:bg-neutral-200 text-neutral-800 border border-neutral-300 text-xs font-semibold uppercase tracking-wider transition-all shadow-xs cursor-pointer"
+                        >
+                          {isCopied ? (
+                            <>
+                              <Check className="w-4 h-4 text-[#1E5631]" />
+                              <span className="text-[#1E5631]">Copied to Clipboard!</span>
+                            </>
+                          ) : (
+                            <>
+                              <Copy className="w-4 h-4 text-neutral-600" />
+                              <span>Copy Full Message</span>
+                            </>
+                          )}
                         </button>
                       </div>
                     </div>
@@ -324,20 +325,26 @@ Recipient: ${TARGET_EMAIL}`;
                   </div>
                 ) : (
                   <form
-                    name="contact"
-                    method="POST"
                     action={`https://formsubmit.co/${TARGET_EMAIL}`}
-                    data-netlify="true"
-                    data-netlify-honeypot="bot-field"
+                    method="POST"
                     onSubmit={handleSubmit}
                     className="space-y-4"
                   >
-                    <input type="hidden" name="form-name" value="contact" />
-                    <input type="hidden" name="to_email" value={TARGET_EMAIL} />
+                    {/* FormSubmit Automated Direct Email Delivery to info@selleriahouse.com */}
                     <input type="hidden" name="_captcha" value="false" />
                     <input type="hidden" name="_template" value="table" />
-                    <input type="hidden" name="_subject" value={`New Inquiry from ${formData.name || 'Website'} [${formData.category}] - Selleria Luxury`} />
+                    <input
+                      type="hidden"
+                      name="_subject"
+                      value={`New Equestrian Export Inquiry from ${formData.name || 'Website Client'} [${formData.category}]`}
+                    />
                     <input type="hidden" name="_replyto" value={formData.email} />
+                    <input
+                      type="hidden"
+                      name="_next"
+                      value={typeof window !== 'undefined' ? `${window.location.origin}/contact?status=success` : 'https://selleriah.netlify.app/contact?status=success'}
+                    />
+                    <input type="text" name="_honey" style={{ display: 'none' }} />
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <label
@@ -481,7 +488,7 @@ Recipient: ${TARGET_EMAIL}`;
                         ) : (
                           <>
                             <Send className="w-3.5 h-3.5" />
-                            <span>Send Message to {TARGET_EMAIL}</span>
+                            <span>Send to Abhishek Goel ({TARGET_EMAIL})</span>
                           </>
                         )}
                       </button>

@@ -79,9 +79,39 @@ Recipient: ${TARGET_NAME} <${TARGET_EMAIL}>`;
     setTimeout(() => setIsCopied(false), 3000);
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
     setIsSending(true);
-    // Allow native browser form submission to https://formsubmit.co/info@selleriahouse.com
+
+    const { subject, body } = getEmailContent();
+
+    // 1. Submit to Netlify background processor if running on Netlify
+    try {
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({
+          'form-name': 'contact',
+          'to_email': TARGET_EMAIL,
+          ...formData,
+        }).toString(),
+      }).catch(() => {});
+    } catch {
+      // ignore
+    }
+
+    // 2. Automatically launch the visitor's mail client addressed to Abhishek Goel <info@selleriahouse.com>
+    const mailtoUrl = `mailto:${TARGET_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    try {
+      window.location.href = mailtoUrl;
+    } catch {
+      // ignore
+    }
+
+    setTimeout(() => {
+      setIsSending(false);
+      setIsSubmitted(true);
+    }, 400);
   };
 
   const handleWhatsAppDirect = () => {
@@ -325,26 +355,16 @@ Recipient: ${TARGET_NAME} <${TARGET_EMAIL}>`;
                   </div>
                 ) : (
                   <form
-                    action={`https://formsubmit.co/${TARGET_EMAIL}`}
+                    name="contact"
                     method="POST"
+                    data-netlify="true"
+                    data-netlify-honeypot="bot-field"
                     onSubmit={handleSubmit}
                     className="space-y-4"
                   >
-                    {/* FormSubmit Automated Direct Email Delivery to info@selleriahouse.com */}
-                    <input type="hidden" name="_captcha" value="false" />
-                    <input type="hidden" name="_template" value="table" />
-                    <input
-                      type="hidden"
-                      name="_subject"
-                      value={`New Equestrian Export Inquiry from ${formData.name || 'Website Client'} [${formData.category}]`}
-                    />
-                    <input type="hidden" name="_replyto" value={formData.email} />
-                    <input
-                      type="hidden"
-                      name="_next"
-                      value={typeof window !== 'undefined' ? `${window.location.origin}/contact?status=success` : 'https://selleriah.netlify.app/contact?status=success'}
-                    />
-                    <input type="text" name="_honey" style={{ display: 'none' }} />
+                    <input type="hidden" name="form-name" value="contact" />
+                    <input type="hidden" name="to_email" value={TARGET_EMAIL} />
+                    <input type="hidden" name="recipient_name" value={TARGET_NAME} />
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <label

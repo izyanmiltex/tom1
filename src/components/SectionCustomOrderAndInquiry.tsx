@@ -212,13 +212,13 @@ export const SectionCustomOrderAndInquiry: React.FC<SectionCustomOrderAndInquiry
 
                   {/* Email */}
                   <a
-                    href="mailto:info@selleriahouse.com"
+                    href="mailto:info@seleriahouse.com"
                     className="flex items-center space-x-3 p-3.5 rounded-xl bg-neutral-900 hover:bg-neutral-800 border border-neutral-800 hover:border-[#1E5631] transition-all text-white"
                   >
                     <Mail className="w-4 h-4 text-white shrink-0" />
                     <div>
                       <span className="block text-neutral-400 text-[10px] uppercase tracking-wider font-semibold">Email</span>
-                      <span className="text-white font-medium text-xs sm:text-sm tracking-wide">info@selleriahouse.com</span>
+                      <span className="text-white font-medium text-xs sm:text-sm tracking-wide">info@seleriahouse.com</span>
                     </div>
                   </a>
 

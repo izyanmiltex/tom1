@@ -86,6 +86,8 @@ export const Header: React.FC<HeaderProps> = ({
               <img
                 src="https://aryezmiltex.com/sellerialogo?v=2"
                 alt="Selleria Luxury"
+                width={94}
+                height={94}
                 loading="eager"
                 decoding="async"
                 onError={(e) => {

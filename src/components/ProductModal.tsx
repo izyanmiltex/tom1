@@ -245,11 +245,11 @@ export const ProductModal: React.FC<ProductModalProps> = ({
                   </div>
 
                   <a
-                    href={`mailto:info@selleriahouse.com?subject=Inquiry: ${encodeURIComponent(product.name)}`}
+                    href={`mailto:info@seleriahouse.com?subject=Inquiry: ${encodeURIComponent(product.name)}`}
                     className="w-full py-2.5 text-xs uppercase tracking-wider font-semibold border border-neutral-300 text-neutral-800 hover:text-[#1E5631] hover:border-[#1E5631] transition-colors flex items-center justify-center gap-1.5 rounded-full"
                   >
                     <Mail className="w-3.5 h-3.5" />
-                    <span>Email: info@selleriahouse.com</span>
+                    <span>Email: info@seleriahouse.com</span>
                   </a>
                 </div>
               </div>

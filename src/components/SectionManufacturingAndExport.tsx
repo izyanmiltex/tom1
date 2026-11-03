@@ -25,19 +25,12 @@ export const SectionManufacturingAndExport: React.FC = () => {
   const COUNTRY_COORDS: Record<string, [number, number]> = {
     india: [697, 186],
     usa: [268, 134],
-    uk: [495, 90],
-    germany: [523, 98],
-    france: [506, 110],
+    italy: [526, 122],
     spain: [492, 126],
-    morocco: [486, 150],
-    egypt: [558, 158],
-    uae: [616, 172],
-    australia: [832, 323],
-    newzealand: [908, 362],
-    southafrica: [545, 318],
-    brazil: [378, 276],
-    canada: [260, 92],
-    japan: [825, 136],
+    saudiarabia: [598, 182],
+    dubai: [622, 172],
+    uk: [495, 90],
+    russia: [680, 85],
   };
 
   const countries: CountryPin[] = [
@@ -45,8 +38,8 @@ export const SectionManufacturingAndExport: React.FC = () => {
       id: 'india',
       name: 'India',
       role: 'Manufacturing Hub',
-      label: 'India',
-      sub: 'Main Factory & Tannery',
+      label: 'India (Factory)',
+      sub: 'Main Tannery & Saddlery Workshop',
       x: COUNTRY_COORDS.india[0],
       y: COUNTRY_COORDS.india[1],
       isManufacturer: true,
@@ -71,11 +64,67 @@ export const SectionManufacturingAndExport: React.FC = () => {
       hub: 'JFK / LAX Logistics Hubs',
     },
     {
+      id: 'italy',
+      name: 'Italy',
+      role: 'Export Destination',
+      label: 'Italy',
+      sub: 'Luxury Tack & Saddlery Boutiques',
+      x: COUNTRY_COORDS.italy[0],
+      y: COUNTRY_COORDS.italy[1],
+      labelPos: 'right',
+      transitAir: '2-3 Days Direct Air',
+      transitSea: '18 Days Genoa Port',
+      volume: 'Bespoke OEM Tack',
+      hub: 'Milan Malpensa (MXP)',
+    },
+    {
+      id: 'spain',
+      name: 'Spain',
+      role: 'Export Destination',
+      label: 'Spain',
+      sub: 'Classical & Showjumping Stables',
+      x: COUNTRY_COORDS.spain[0],
+      y: COUNTRY_COORDS.spain[1],
+      labelPos: 'left',
+      transitAir: '3 Days DDP Air',
+      transitSea: '19 Days Valencia Port',
+      volume: 'Bridle & Saddle Supply',
+      hub: 'Madrid-Barajas (MAD)',
+    },
+    {
+      id: 'saudiarabia',
+      name: 'Saudi Arabia',
+      role: 'Export Destination',
+      label: 'Saudi Arabia',
+      sub: 'Royal Stables & Equestrian Clubs',
+      x: COUNTRY_COORDS.saudiarabia[0],
+      y: COUNTRY_COORDS.saudiarabia[1],
+      labelPos: 'bottom',
+      transitAir: '24-48 Hours Express',
+      transitSea: '7 Days Jeddah Islamic Port',
+      volume: 'High-Volume Premium Tack',
+      hub: 'Riyadh King Khalid (RUH)',
+    },
+    {
+      id: 'dubai',
+      name: 'Dubai',
+      role: 'Export Destination',
+      label: 'Dubai',
+      sub: 'Endurance Stables & Tack Boutiques',
+      x: COUNTRY_COORDS.dubai[0],
+      y: COUNTRY_COORDS.dubai[1],
+      labelPos: 'right',
+      transitAir: '24-36 Hours Direct',
+      transitSea: '5 Days Jebel Ali Port',
+      volume: 'Frequent Air Cargo',
+      hub: 'Dubai International (DXB)',
+    },
+    {
       id: 'uk',
       name: 'United Kingdom',
       role: 'Export Destination',
       label: 'UK',
-      sub: 'Equestrian Boutiques',
+      sub: 'Heritage Saddlery & Riding Academies',
       x: COUNTRY_COORDS.uk[0],
       y: COUNTRY_COORDS.uk[1],
       labelPos: 'top',
@@ -85,102 +134,18 @@ export const SectionManufacturingAndExport: React.FC = () => {
       hub: 'London Heathrow (LHR)',
     },
     {
-      id: 'germany',
-      name: 'Germany',
+      id: 'russia',
+      name: 'Russia',
       role: 'Export Destination',
-      label: 'Germany',
-      sub: 'Dressage & Riding Academies',
-      x: COUNTRY_COORDS.germany[0],
-      y: COUNTRY_COORDS.germany[1],
+      label: 'Russia',
+      sub: 'Equestrian Centres & Cold-Weather Gear',
+      x: COUNTRY_COORDS.russia[0],
+      y: COUNTRY_COORDS.russia[1],
       labelPos: 'top',
-      transitAir: '3 Days DDP',
-      transitSea: '20 Days Port Hamburg',
-      volume: 'Bulk OEM Contracts',
-      hub: 'Frankfurt Cargo City (FRA)',
-    },
-    {
-      id: 'france',
-      name: 'France',
-      role: 'Export Destination',
-      label: 'France',
-      sub: 'Saddlery & Luxury Tack',
-      x: COUNTRY_COORDS.france[0],
-      y: COUNTRY_COORDS.france[1],
-      labelPos: 'bottom',
-      transitAir: '3 Days Air',
-      transitSea: '21 Days Sea',
-      volume: 'Custom Collections',
-      hub: 'Paris Charles de Gaulle (CDG)',
-    },
-    {
-      id: 'uae',
-      name: 'UAE & Middle East',
-      role: 'Export Destination',
-      label: 'UAE',
-      sub: 'Royal Stables & Endurance Clubs',
-      x: COUNTRY_COORDS.uae[0],
-      y: COUNTRY_COORDS.uae[1],
-      labelPos: 'right',
-      transitAir: '24-48 Hours Express',
-      transitSea: '6 Days Jebel Ali',
-      volume: 'High-Frequency Air',
-      hub: 'Dubai International (DXB)',
-    },
-    {
-      id: 'australia',
-      name: 'Australia',
-      role: 'Export Destination',
-      label: 'Australia',
-      sub: 'Polo & Showjumping Tack',
-      x: COUNTRY_COORDS.australia[0],
-      y: COUNTRY_COORDS.australia[1],
-      labelPos: 'right',
-      transitAir: '4-5 Days Air',
-      transitSea: '16 Days Direct Sea',
+      transitAir: '3-4 Days Air Cargo',
+      transitSea: '22 Days St. Petersburg',
       volume: 'Seasonal Bulk Shipments',
-      hub: 'Sydney Kingsford Smith (SYD)',
-    },
-    {
-      id: 'canada',
-      name: 'Canada',
-      role: 'Export Destination',
-      label: 'Canada',
-      sub: 'Equestrian Tack Wholesalers',
-      x: COUNTRY_COORDS.canada[0],
-      y: COUNTRY_COORDS.canada[1],
-      labelPos: 'top',
-      transitAir: '4 Days Air',
-      transitSea: '24 Days Sea',
-      volume: 'Retailer Supply',
-      hub: 'Toronto Pearson (YYZ)',
-    },
-    {
-      id: 'japan',
-      name: 'Japan',
-      role: 'Export Destination',
-      label: 'Japan',
-      sub: 'Precision Equestrian Goods',
-      x: COUNTRY_COORDS.japan[0],
-      y: COUNTRY_COORDS.japan[1],
-      labelPos: 'right',
-      transitAir: '3-4 Days Air',
-      transitSea: '14 Days Tokyo Port',
-      volume: 'Premium Small Batch',
-      hub: 'Tokyo Narita (NRT)',
-    },
-    {
-      id: 'southafrica',
-      name: 'South Africa',
-      role: 'Export Destination',
-      label: 'South Africa',
-      sub: 'Equestrian Centres',
-      x: COUNTRY_COORDS.southafrica[0],
-      y: COUNTRY_COORDS.southafrica[1],
-      labelPos: 'bottom',
-      transitAir: '4 Days Air',
-      transitSea: '16 Days Durban Port',
-      volume: 'Direct B2B',
-      hub: 'Johannesburg (JNB)',
+      hub: 'Moscow Sheremetyevo (SVO)',
     },
   ];
 
@@ -293,6 +258,42 @@ export const SectionManufacturingAndExport: React.FC = () => {
               strokeDasharray="6,6"
               className="animated-route opacity-70"
             />
+            {/* India to Italy */}
+            <path
+              d="M 697 186 Q 605 140 526 122"
+              fill="none"
+              stroke="#1E5631"
+              strokeWidth={activePin === 'italy' ? '2.4' : '1.4'}
+              strokeDasharray="6,6"
+              className="animated-route opacity-70"
+            />
+            {/* India to Spain */}
+            <path
+              d="M 697 186 Q 585 142 492 126"
+              fill="none"
+              stroke="#1E5631"
+              strokeWidth={activePin === 'spain' ? '2.4' : '1.4'}
+              strokeDasharray="6,6"
+              className="animated-route opacity-70"
+            />
+            {/* India to Saudi Arabia */}
+            <path
+              d="M 697 186 Q 645 180 598 182"
+              fill="none"
+              stroke="#1E5631"
+              strokeWidth={activePin === 'saudiarabia' ? '2.4' : '1.4'}
+              strokeDasharray="6,6"
+              className="animated-route opacity-70"
+            />
+            {/* India to Dubai */}
+            <path
+              d="M 697 186 Q 658 175 622 172"
+              fill="none"
+              stroke="#1E5631"
+              strokeWidth={activePin === 'dubai' ? '2.4' : '1.4'}
+              strokeDasharray="6,6"
+              className="animated-route opacity-70"
+            />
             {/* India to UK */}
             <path
               d="M 697 186 Q 590 125 495 90"
@@ -302,66 +303,12 @@ export const SectionManufacturingAndExport: React.FC = () => {
               strokeDasharray="6,6"
               className="animated-route opacity-70"
             />
-            {/* India to Germany */}
+            {/* India to Russia */}
             <path
-              d="M 697 186 Q 610 135 523 98"
+              d="M 697 186 Q 700 125 680 85"
               fill="none"
               stroke="#1E5631"
-              strokeWidth={activePin === 'germany' ? '2.4' : '1.4'}
-              strokeDasharray="6,6"
-              className="animated-route opacity-70"
-            />
-            {/* India to France */}
-            <path
-              d="M 697 186 Q 600 145 506 110"
-              fill="none"
-              stroke="#1E5631"
-              strokeWidth={activePin === 'france' ? '2.4' : '1.4'}
-              strokeDasharray="6,6"
-              className="animated-route opacity-70"
-            />
-            {/* India to UAE */}
-            <path
-              d="M 697 186 Q 655 178 616 172"
-              fill="none"
-              stroke="#1E5631"
-              strokeWidth={activePin === 'uae' ? '2.4' : '1.4'}
-              strokeDasharray="6,6"
-              className="animated-route opacity-70"
-            />
-            {/* India to Australia */}
-            <path
-              d="M 697 186 Q 770 270 832 323"
-              fill="none"
-              stroke="#1E5631"
-              strokeWidth={activePin === 'australia' ? '2.4' : '1.4'}
-              strokeDasharray="6,6"
-              className="animated-route opacity-70"
-            />
-            {/* India to Canada */}
-            <path
-              d="M 697 186 Q 430 40 260 92"
-              fill="none"
-              stroke="#1E5631"
-              strokeWidth={activePin === 'canada' ? '2.4' : '1.4'}
-              strokeDasharray="6,6"
-              className="animated-route opacity-70"
-            />
-            {/* India to Japan */}
-            <path
-              d="M 697 186 Q 760 150 825 136"
-              fill="none"
-              stroke="#1E5631"
-              strokeWidth={activePin === 'japan' ? '2.4' : '1.4'}
-              strokeDasharray="6,6"
-              className="animated-route opacity-70"
-            />
-            {/* India to South Africa */}
-            <path
-              d="M 697 186 Q 620 260 545 318"
-              fill="none"
-              stroke="#1E5631"
-              strokeWidth={activePin === 'southafrica' ? '2.4' : '1.4'}
+              strokeWidth={activePin === 'russia' ? '2.4' : '1.4'}
               strokeDasharray="6,6"
               className="animated-route opacity-70"
             />
@@ -462,6 +409,60 @@ export const SectionManufacturingAndExport: React.FC = () => {
             );
           })}
         </svg>
+      </div>
+
+      {/* Interactive Destination Selector Pill Bar for Mobile & Desktop */}
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 pt-6 pb-2">
+        <div className="flex flex-wrap items-center justify-center gap-2">
+          {countries.map((c) => {
+            const isSelected = (activePin === c.id) || (!activePin && c.id === 'india');
+            return (
+              <button
+                key={c.id}
+                type="button"
+                onClick={() => setActivePin(c.id)}
+                className={`px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase transition-all duration-200 cursor-pointer flex items-center gap-1.5 ${
+                  isSelected
+                    ? 'bg-[#1E5631] text-white shadow-sm ring-2 ring-[#1E5631]/30'
+                    : 'bg-neutral-100 text-neutral-700 hover:bg-[#F0F6F2] hover:text-[#1E5631] border border-neutral-200'
+                }`}
+              >
+                <span className={`w-1.5 h-1.5 rounded-full ${c.isManufacturer ? 'bg-amber-400' : 'bg-current'}`} />
+                <span>{c.label}</span>
+              </button>
+            );
+          })}
+        </div>
+
+        {/* Selected Hub Logistics Specs Card */}
+        <div className="mt-4 p-4 rounded-xl bg-neutral-50/90 border border-neutral-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 text-xs">
+          <div className="flex items-center gap-3">
+            <div className="w-9 h-9 rounded-full bg-[#1E5631]/10 text-[#1E5631] flex items-center justify-center shrink-0 font-bold">
+              <Globe className="w-4 h-4" />
+            </div>
+            <div>
+              <p className="font-semibold text-black text-sm">
+                {activeCountryData.name} {activeCountryData.isManufacturer ? '— Global Manufacturing & Tannery Hub' : '— Export Partner Destination'}
+              </p>
+              <p className="text-neutral-500 font-mono text-[11px]">{activeCountryData.sub}</p>
+            </div>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-4 text-neutral-700">
+            <div className="flex items-center gap-1.5">
+              <Plane className="w-3.5 h-3.5 text-[#1E5631]" />
+              <span><strong>Air Cargo:</strong> {activeCountryData.transitAir}</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <Ship className="w-3.5 h-3.5 text-[#1E5631]" />
+              <span><strong>Sea Freight:</strong> {activeCountryData.transitSea}</span>
+            </div>
+            <div className="flex items-center gap-1.5">
+              <Package className="w-3.5 h-3.5 text-[#1E5631]" />
+              <span><strong>Hub:</strong> {activeCountryData.hub}</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -113,7 +113,9 @@ export const ModernFooter: React.FC<ModernFooterProps> = ({
                 <img
                   src="https://aryezmiltex.com/sellerialogo?v=2"
                   alt="Selleria Luxury"
-                  loading="eager"
+                  width={118}
+                  height={118}
+                  loading="lazy"
                   decoding="async"
                   onError={(e) => {
                     const img = e.currentTarget;
@@ -181,9 +183,9 @@ export const ModernFooter: React.FC<ModernFooterProps> = ({
                 </a>
               </li>
               <li>
-                <a href="mailto:info@selleriahouse.com" className="hover:text-[#A2D4B1] transition-colors flex items-center gap-2.5">
+                <a href="mailto:info@seleriahouse.com" className="hover:text-[#A2D4B1] transition-colors flex items-center gap-2.5">
                   <Mail className="w-3.5 h-3.5 text-[#A2D4B1] shrink-0" />
-                  <span>info@selleriahouse.com</span>
+                  <span>info@seleriahouse.com</span>
                 </a>
               </li>
               <li className="text-neutral-400 flex items-start gap-2.5 pt-1 text-[11px]">

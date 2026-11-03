@@ -36,8 +36,16 @@ export const ProductCard: React.FC<ProductCardProps> = ({
       <div className="relative aspect-[3/4] overflow-hidden bg-[#f7f7f7]">
         <img
           referrerPolicy="no-referrer"
+          loading="lazy"
+          decoding="async"
           src={displayImage}
           alt={product.name}
+          onError={(e) => {
+            const img = e.currentTarget;
+            if (!img.src.includes('/sellerialogo.png')) {
+              img.src = '/sellerialogo.png';
+            }
+          }}
           className="w-full h-full object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105"
         />
 

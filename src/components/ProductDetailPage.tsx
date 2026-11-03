@@ -112,8 +112,11 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({ product, o
                 referrerPolicy="no-referrer"
                 src={selectedImage}
                 onError={(e) => {
-                  if ('fallbackImage' in product && product.fallbackImage) {
-                    (e.currentTarget as HTMLImageElement).src = product.fallbackImage;
+                  const img = e.currentTarget as HTMLImageElement;
+                  if ('fallbackImage' in product && product.fallbackImage && !img.src.includes(product.fallbackImage)) {
+                    img.src = product.fallbackImage;
+                  } else if (!img.src.includes('/sellerialogo.png')) {
+                    img.src = '/sellerialogo.png';
                   }
                 }}
                 alt={productName}

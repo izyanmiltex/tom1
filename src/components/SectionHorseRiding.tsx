@@ -258,6 +258,13 @@ export const SectionHorseRiding: React.FC<SectionHorseRidingProps> = ({ onCardCl
                   alt={`Selleria Luxury ${card.title}`}
                   className="w-full h-full object-cover object-center filter brightness-[0.95] contrast-[1.03] transition-transform duration-700 ease-out group-hover:scale-[1.04]"
                   loading="lazy"
+                  decoding="async"
+                  onError={(e) => {
+                    const img = e.currentTarget;
+                    if (!img.src.includes('/sellerialogo.png')) {
+                      img.src = '/sellerialogo.png';
+                    }
+                  }}
                 />
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent pointer-events-none" />

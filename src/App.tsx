@@ -12,11 +12,13 @@ import { SectionAboutLeathercraft } from './components/SectionAboutLeathercraft'
 import { SectionHorseRiding } from './components/SectionHorseRiding';
 import { SectionGarments } from './components/SectionGarments';
 import { SectionHaltersAndBridles } from './components/SectionHaltersAndBridles';
-import { SectionManufacturingAndExport } from './components/SectionManufacturingAndExport';
-import { SectionCustomOrderAndInquiry } from './components/SectionCustomOrderAndInquiry';
 import { ModernFooter } from './components/ModernFooter';
 import { FadeInSection } from './components/FadeInSection';
 import { FloatingWhatsAppButton } from './components/FloatingWhatsAppButton';
+
+// Below-the-fold sections lazy loaded to minimize initial JS execution
+const SectionManufacturingAndExport = React.lazy(() => import('./components/SectionManufacturingAndExport').then((m) => ({ default: m.SectionManufacturingAndExport })));
+const SectionCustomOrderAndInquiry = React.lazy(() => import('./components/SectionCustomOrderAndInquiry').then((m) => ({ default: m.SectionCustomOrderAndInquiry })));
 
 // Lazy-loaded pages (code-split for maximum initial loading speed)
 const ProductsPage = React.lazy(() => import('./components/ProductsPage').then((m) => ({ default: m.ProductsPage })));
@@ -357,12 +359,16 @@ export default function App() {
 
               {/* 7. Export Partners Map: Interactive animation */}
               <FadeInSection>
-                <SectionManufacturingAndExport />
+                <React.Suspense fallback={<div className="w-full h-80 bg-neutral-900/10 animate-pulse rounded-lg" />}>
+                  <SectionManufacturingAndExport />
+                </React.Suspense>
               </FadeInSection>
 
               {/* 7. Private Labelling: Materials, Colors, Branding, Packaging */}
               <FadeInSection>
-                <SectionCustomOrderAndInquiry onOpenConcierge={handleGoToPrivateLabel} />
+                <React.Suspense fallback={<div className="w-full h-80 bg-neutral-100/50 animate-pulse rounded-lg" />}>
+                  <SectionCustomOrderAndInquiry onOpenConcierge={handleGoToPrivateLabel} />
+                </React.Suspense>
               </FadeInSection>
             </>
           )}

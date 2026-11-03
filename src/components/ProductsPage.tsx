@@ -159,7 +159,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
       name: 'PP Halter Suede Padding With Rope',
       category: 'halters',
       categoryLabel: 'Halters',
-      image: 'http://aryezmiltex.com/halter1',
+      image: 'https://aryezmiltex.com/halter1',
       fallbackImage: '/sellerialogo.png',
       specs: 'Hand-braided vegetable-tanned leather crown and noseband, matching terracotta lead rope with brass bull snap, heavy-duty solid brass hardware, adjustable chin strap.',
       description: 'Crafted with heritage leather braiding and solid brass fittings, this matching terracotta halter and lead set exemplifies artisanal elegance for championship presentations.',
@@ -169,7 +169,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
       name: 'PP Halter Mink Padding',
       category: 'halters',
       categoryLabel: 'Halters',
-      image: 'http://aryezmiltex.com/halter2',
+      image: 'https://aryezmiltex.com/halter2',
       fallbackImage: '/sellerialogo.png',
       specs: 'Full-grain English bridle leather, ultra-soft hypoallergenic fleece lining, dual-crown buckle adjustment, quick-snap throatlatch, polished stainless steel hardware.',
       description: 'Engineered for first-class equine travel and show ring preparation. Plush fleece padding eliminates rub marks while heavyweight leather guarantees enduring strength.',
@@ -179,7 +179,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
       name: 'PVC/Biothane Halter With Padding',
       category: 'halters',
       categoryLabel: 'Halters',
-      image: 'http://aryezmiltex.com/halter3',
+      image: 'https://aryezmiltex.com/halter3',
       fallbackImage: '/sellerialogo.png',
       specs: 'Contoured ergonomic crownpiece, soft calfskin padded noseband and cheeks, triple-ply reinforced stitching, brushed brass hardware with throat snap.',
       description: 'Designed for everyday barn luxury and turnout comfort. Features an anatomical cutaway poll to alleviate sensitive nerve pressure behind the ears.',
@@ -189,7 +189,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
       name: 'PP Halter Mink Padding',
       category: 'halters',
       categoryLabel: 'Halters',
-      image: 'http://aryezmiltex.com/halter4',
+      image: 'https://aryezmiltex.com/halter4',
       fallbackImage: '/sellerialogo.png',
       specs: 'Double-stitched vegetable-tanned calfskin, customizable solid brass nameplate, rolled throatlatch, dual-crown adjustment, hand-burnished oil edges.',
       description: 'Championship-ready presentation halter tailored for prestigious sales rings and breed shows. Supple French calfskin offers exquisite hand feel and lasting luster.',
@@ -199,7 +199,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
       name: 'Rope Halter',
       category: 'halters',
       categoryLabel: 'Halters',
-      image: 'http://aryezmiltex.com/halter5',
+      image: 'https://aryezmiltex.com/halter5',
       fallbackImage: '/sellerialogo.png',
       specs: 'Intricate hand-carved floral tooling along noseband and cheeks, heavy harness leather backing, antiqued bronze-finish hardware, adjustable curb strap.',
       description: 'A celebration of traditional western and equestrian leather artistry. Every floral motif is individually carved by master saddlers for distinctive individuality.',
@@ -209,7 +209,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
       name: 'Rope Halter',
       category: 'halters',
       categoryLabel: 'Halters',
-      image: 'http://aryezmiltex.com/halter6',
+      image: 'https://aryezmiltex.com/halter6',
       fallbackImage: '/sellerialogo.png',
       specs: 'Extra-thick 1-inch English bridle leather, triple nylon reinforced safety stitching, solid brass double-crown buckles and throat snap, adjustable chin.',
       description: 'The gold standard for world-class stable management. Triple-stitched construction ensures uncompromising durability through seasons of daily handling.',
@@ -219,7 +219,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
       name: 'PP Halter Mink Padding',
       category: 'halters',
       categoryLabel: 'Halters',
-      image: 'http://aryezmiltex.com/halter7',
+      image: 'https://aryezmiltex.com/halter7',
       fallbackImage: '/sellerialogo.png',
       specs: 'Handcrafted black latigo leather, engraved western silver-plated cheek accents, matching buckle sets, throat latch clip, adjustable crown.',
       description: 'Exquisite showmanship presentation halter adorned with intricate engraved silver-tone metalwork. Shines brightly under stadium lights for halter classes and auctions.',
@@ -229,7 +229,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
       name: 'Leather Halter With Padding',
       category: 'halters',
       categoryLabel: 'Halters',
-      image: 'http://aryezmiltex.com/halter8',
+      image: 'https://aryezmiltex.com/halter8',
       fallbackImage: '/sellerialogo.png',
       specs: 'Artisan rolled leather cheeks and throatlatch, flat padded crown and noseband, detachable throat snap, solid brass rings and buckles.',
       description: 'Sleek, minimalist elegance designed for elite grooming and daily handling. Supple rolled leather contours naturally around equine facial features.',
@@ -239,7 +239,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
       name: 'Leather Nylon Halter',
       category: 'halters',
       categoryLabel: 'Halters',
-      image: 'http://aryezmiltex.com/halter9',
+      image: 'https://aryezmiltex.com/halter9',
       fallbackImage: '/sellerialogo.png',
       specs: 'Full-grain bridle leather with navy blue soft-padded lining, contrast white stitching, brushed nickel-plated hardware, dual-crown buckle system.',
       description: 'Modern European styling meets traditional saddlery craft. The striking navy padding provides cushioned comfort while accentuating facial conformation.',
@@ -249,7 +249,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
       name: 'PP Halter Fleece Padding',
       category: 'halters',
       categoryLabel: 'Halters',
-      image: 'http://aryezmiltex.com/halter10',
+      image: 'https://aryezmiltex.com/halter10',
       fallbackImage: '/sellerialogo.png',
       specs: 'Heavyweight 1.25-inch oiled harness leather, reinforced box-stitched stress points, extra-large stainless steel dees and buckle, durable throat snap.',
       description: 'Engineered specifically for warmbloods and larger breeds requiring superior tensile strength. Resists weather elements, sweat, and rigorous turnout conditions.',
@@ -259,7 +259,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
       name: 'Leather Polo Halter',
       category: 'halters',
       categoryLabel: 'Halters',
-      image: 'http://aryezmiltex.com/halter11',
+      image: 'https://aryezmiltex.com/halter11',
       fallbackImage: '/sellerialogo.png',
       specs: 'Hand-tooled floral cheeks and noseband, hand-braided rawhide accents, antiqued copper-tone hardware with engraved floral buckles.',
       description: 'Combines authentic ranch craftsmanship with fine show arena polish. Hand-braided rawhide elements provide distinctive texture and Western heritage charm.',
@@ -269,7 +269,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
       name: 'Leather Halter',
       category: 'halters',
       categoryLabel: 'Halters',
-      image: 'http://aryezmiltex.com/halter12',
+      image: 'https://aryezmiltex.com/halter12',
       fallbackImage: '/sellerialogo.png',
       specs: 'Supple Italian leather, genuine dense lambswool lining across poll and bridge, stainless steel quick-release snap, adjustable chin strap.',
       description: 'The ultimate in equine transport comfort. Dense natural wool cushioning absorbs friction during long-distance air cargo and horsebox travel.',
@@ -279,7 +279,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
       name: 'PVC/Biothane Halter With Padding',
       category: 'halters',
       categoryLabel: 'Halters',
-      image: 'http://aryezmiltex.com/halter13',
+      image: 'https://aryezmiltex.com/halter13',
       fallbackImage: '/sellerialogo.png',
       specs: 'Full-grain glove-tanned leather, anatomical pressure-relief crown, rose gold-plated zinc alloy buckles, soft padded lining, contrast black stitching.',
       description: 'Contemporary luxury for the fashion-forward equestrian. Lustrous rose gold hardware creates a sophisticated contrast against deep matte black leather.',
@@ -289,7 +289,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
       name: 'Rope Halter',
       category: 'halters',
       categoryLabel: 'Halters',
-      image: 'http://aryezmiltex.com/halter14',
+      image: 'https://aryezmiltex.com/halter14',
       fallbackImage: '/sellerialogo.png',
       specs: 'Vegetable-tanned pull-up leather that patinas with age, solid cast brass O-rings and square buckles, reinforced double-riveted stress points.',
       description: 'Rugged elegance with timeless heirloom character. High-oil leather develops a rich, supple patina with every use while maintaining structural integrity.',
@@ -578,7 +578,7 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
       name: 'Shoulder Tote',
       category: 'leather-bags',
       categoryLabel: 'Leather Bags',
-      image: 'http://aryezmiltex.com/bag10',
+      image: 'https://aryezmiltex.com/bag10',
       fallbackImage: '/sellerialogo.png',
       specs: 'Natural black-and-white spotted hair-on cowhide body, hand-tooled floral leather medallion, white contrast whipstitching, exterior zipper pocket, dual flat leather shoulder straps.',
       description: 'Handcrafted from rich vegetable-tanned leather and natural hair-on cowhide, featuring an embossed central medallion and artisanal whipstitch borders. Blends Western ranch heritage with timeless Selleria Luxury.',
@@ -782,13 +782,17 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
                     className={`relative ${aspectClass} w-full overflow-hidden bg-neutral-900 cursor-pointer group/img`}
                   >
                     <img
-                      loading={idx < 6 ? 'eager' : 'lazy'}
+                      loading={idx < 3 ? 'eager' : 'lazy'}
+                      fetchPriority={idx < 3 ? 'high' : 'auto'}
                       decoding="async"
                       referrerPolicy="no-referrer"
                       src={item.image}
                       onError={(e) => {
-                        if (item.fallbackImage) {
-                          (e.currentTarget as HTMLImageElement).src = item.fallbackImage;
+                        const img = e.currentTarget as HTMLImageElement;
+                        if (item.fallbackImage && !img.src.includes(item.fallbackImage)) {
+                          img.src = item.fallbackImage;
+                        } else if (!img.src.includes('/sellerialogo.png')) {
+                          img.src = '/sellerialogo.png';
                         }
                       }}
                       alt={item.name}
@@ -980,8 +984,11 @@ export const ProductsPage: React.FC<ProductsPageProps> = ({
                 src={zoomedProduct.image}
                 alt={zoomedProduct.name}
                 onError={(e) => {
-                  if (zoomedProduct.fallbackImage) {
-                    (e.currentTarget as HTMLImageElement).src = zoomedProduct.fallbackImage;
+                  const img = e.currentTarget as HTMLImageElement;
+                  if (zoomedProduct.fallbackImage && !img.src.includes(zoomedProduct.fallbackImage)) {
+                    img.src = zoomedProduct.fallbackImage;
+                  } else if (!img.src.includes('/sellerialogo.png')) {
+                    img.src = '/sellerialogo.png';
                   }
                 }}
                 className="max-h-[75vh] w-auto max-w-full object-contain rounded-xl shadow-2xl select-none"

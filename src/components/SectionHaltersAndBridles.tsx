@@ -29,7 +29,7 @@ export const SectionHaltersAndBridles: React.FC<SectionHaltersAndBridlesProps> =
     },
     {
       id: 'sh-halter-01',
-      image: 'http://aryezmiltex.com/halter1',
+      image: 'https://aryezmiltex.com/halter1',
       title: 'PP Halter Suede Padding With Rope',
       category: 'halters',
       categoryLabel: 'Halters',
@@ -49,7 +49,7 @@ export const SectionHaltersAndBridles: React.FC<SectionHaltersAndBridlesProps> =
     },
     {
       id: 'sh-halter-02',
-      image: 'http://aryezmiltex.com/halter2',
+      image: 'https://aryezmiltex.com/halter2',
       title: 'PP Halter Mink Padding',
       category: 'halters',
       categoryLabel: 'Halters',
@@ -69,7 +69,7 @@ export const SectionHaltersAndBridles: React.FC<SectionHaltersAndBridlesProps> =
     },
     {
       id: 'sh-halter-03',
-      image: 'http://aryezmiltex.com/halter3',
+      image: 'https://aryezmiltex.com/halter3',
       title: 'PVC/Biothane Halter With Padding',
       category: 'halters',
       categoryLabel: 'Halters',
@@ -89,7 +89,7 @@ export const SectionHaltersAndBridles: React.FC<SectionHaltersAndBridlesProps> =
     },
     {
       id: 'sh-halter-04',
-      image: 'http://aryezmiltex.com/halter4',
+      image: 'https://aryezmiltex.com/halter4',
       title: 'PP Halter Mink Padding',
       category: 'halters',
       categoryLabel: 'Halters',
@@ -109,7 +109,7 @@ export const SectionHaltersAndBridles: React.FC<SectionHaltersAndBridlesProps> =
     },
     {
       id: 'sh-halter-05',
-      image: 'http://aryezmiltex.com/halter5',
+      image: 'https://aryezmiltex.com/halter5',
       title: 'Two-Tone Floral Carved Halter',
       category: 'halters',
       categoryLabel: 'Halters',
@@ -308,9 +308,12 @@ export const SectionHaltersAndBridles: React.FC<SectionHaltersAndBridlesProps> =
                   alt={`Selleria Luxury ${card.title}`}
                   className="w-full h-full object-cover object-center filter brightness-[0.95] contrast-[1.03] transition-transform duration-700 ease-out group-hover:scale-[1.04]"
                   loading="lazy"
+                  decoding="async"
                   onError={(e) => {
-                    // Fallback to high quality equestrian tack image if domain is unavailable
-                    (e.target as HTMLImageElement).src = 'https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?q=80&w=1200&auto=format&fit=crop';
+                    const img = e.currentTarget;
+                    if (!img.src.includes('/sellerialogo.png')) {
+                      img.src = '/sellerialogo.png';
+                    }
                   }}
                 />
 

@@ -378,6 +378,7 @@ Recipient: ${TARGET_NAME} <${TARGET_EMAIL}>`;
                         </label>
                         <input
                           type="text"
+                          name="name"
                           required
                           value={formData.name}
                           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -396,6 +397,7 @@ Recipient: ${TARGET_NAME} <${TARGET_EMAIL}>`;
                         </label>
                         <input
                           type="email"
+                          name="email"
                           required
                           value={formData.email}
                           onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -417,6 +419,7 @@ Recipient: ${TARGET_NAME} <${TARGET_EMAIL}>`;
                         </label>
                         <input
                           type="tel"
+                          name="phone"
                           value={formData.phone}
                           onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                           placeholder="+1 555 0192"
@@ -434,6 +437,7 @@ Recipient: ${TARGET_NAME} <${TARGET_EMAIL}>`;
                         </label>
                         <input
                           type="text"
+                          name="country"
                           value={formData.country}
                           onChange={(e) => setFormData({ ...formData, country: e.target.value })}
                           placeholder="e.g. United States, Germany"
@@ -452,6 +456,7 @@ Recipient: ${TARGET_NAME} <${TARGET_EMAIL}>`;
                         Category of Interest
                       </label>
                       <select
+                        name="category"
                         value={formData.category}
                         onChange={(e) => setFormData({ ...formData, category: e.target.value })}
                         className="w-full px-3.5 py-2.5 rounded-lg border border-neutral-300 bg-white text-xs text-black focus:outline-none focus:border-[#1E5631] focus:ring-1 focus:ring-[#1E5631]"
@@ -483,6 +488,7 @@ Recipient: ${TARGET_NAME} <${TARGET_EMAIL}>`;
                         Message & Quantity / Sample Request *
                       </label>
                       <textarea
+                        name="message"
                         required
                         rows={3}
                         value={formData.message}

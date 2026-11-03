@@ -79,15 +79,40 @@ Recipient: ${TARGET_NAME} <${TARGET_EMAIL}>`;
     setTimeout(() => setIsCopied(false), 3000);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSending(true);
 
-    const { subject, body } = getEmailContent();
+    const form = e.currentTarget;
+    const formDataObj = new FormData(form);
 
-    // 1. Submit to Netlify background processor if running on Netlify
+    // Explicitly set notification subject to match exact requested format
+    const subjectLine = `New Inquiry Form Submitted: ${formData.category !== 'all' ? formData.category : 'General Equestrian'} - ${formData.name || 'Client'}`;
+    formDataObj.set('_subject', subjectLine);
+
     try {
-      fetch('/', {
+      // 1. Submit directly to ShipMyForm background endpoint
+      const res = await fetch('https://shipmyform.com/to/info@selleriahouse.com', {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+        },
+        body: formDataObj,
+      });
+
+      const data = await res.json().catch(() => null);
+      if (data && data.ok) {
+        setIsSending(false);
+        setIsSubmitted(true);
+        return;
+      }
+    } catch (err) {
+      console.warn('ShipMyForm endpoint submission completed with fallback', err);
+    }
+
+    // 2. Netlify background fallback if on Netlify
+    try {
+      await fetch('/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
         body: new URLSearchParams({
@@ -95,23 +120,13 @@ Recipient: ${TARGET_NAME} <${TARGET_EMAIL}>`;
           'to_email': TARGET_EMAIL,
           ...formData,
         }).toString(),
-      }).catch(() => {});
+      });
     } catch {
       // ignore
     }
 
-    // 2. Automatically launch the visitor's mail client addressed to Abhishek Goel <info@selleriahouse.com>
-    const mailtoUrl = `mailto:${TARGET_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    try {
-      window.location.href = mailtoUrl;
-    } catch {
-      // ignore
-    }
-
-    setTimeout(() => {
-      setIsSending(false);
-      setIsSubmitted(true);
-    }, 400);
+    setIsSending(false);
+    setIsSubmitted(true);
   };
 
   const handleWhatsAppDirect = () => {
@@ -355,16 +370,11 @@ Recipient: ${TARGET_NAME} <${TARGET_EMAIL}>`;
                   </div>
                 ) : (
                   <form
-                    action="https://shipmyform.com/to/info@selleriahouse.com"
-                    method="POST"
+                    onSubmit={handleSubmit}
                     className="space-y-4"
                   >
-                    <input type="hidden" name="_subject" value={`New Equestrian Export Inquiry from ${formData.name || 'Website Client'} [${formData.category}]`} />
-                    <input
-                      type="hidden"
-                      name="_redirect"
-                      value={typeof window !== 'undefined' ? `${window.location.origin}/contact?status=success` : 'https://selleriah.netlify.app/contact?status=success'}
-                    />
+                    <input type="hidden" name="_subject" value={`New Inquiry Form Submitted: ${formData.category} - ${formData.name || 'Client'}`} />
+                    <input type="hidden" name="to_email" value={TARGET_EMAIL} />
                     <input type="text" name="_gotcha" style={{ display: 'none' }} tabIndex={-1} autoComplete="off" />
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
@@ -501,13 +511,23 @@ Recipient: ${TARGET_NAME} <${TARGET_EMAIL}>`;
                     <div className="pt-2">
                       <button
                         type="submit"
-                        className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#1E5631] text-white hover:bg-[#164225] font-semibold text-xs uppercase tracking-wider transition-colors shadow-md cursor-pointer"
+                        disabled={isSending}
+                        className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-[#1E5631] text-white hover:bg-[#164225] disabled:bg-neutral-400 font-semibold text-xs uppercase tracking-wider transition-colors shadow-md cursor-pointer"
                         style={{
                           fontFamily: 'RL_DroidKufi, "Founders Grotesk text Regular", Arial, Helvetica, sans-serif',
                         }}
                       >
-                        <Send className="w-3.5 h-3.5" />
-                        <span>Send to Abhishek Goel ({TARGET_EMAIL})</span>
+                        {isSending ? (
+                          <>
+                            <div className="w-3.5 h-3.5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                            <span>Dispatching Inquiry to {TARGET_EMAIL}...</span>
+                          </>
+                        ) : (
+                          <>
+                            <Send className="w-3.5 h-3.5" />
+                            <span>Send Inquiry to Abhishek Goel ({TARGET_EMAIL})</span>
+                          </>
+                        )}
                       </button>
 
                       {/* Direct alternative options right below button */}
